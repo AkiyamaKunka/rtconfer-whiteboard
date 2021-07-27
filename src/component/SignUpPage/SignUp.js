@@ -57,7 +57,7 @@ export default function SignUp() {
             }
         ).then((data) => {
             console.log(data)
-            authCtx.login(data.idToken)
+            authCtx.login(data.idToken, enteredEmail)
             const remindMessage = "Sign Up!"
             alert(remindMessage)
         }).catch((error) => {

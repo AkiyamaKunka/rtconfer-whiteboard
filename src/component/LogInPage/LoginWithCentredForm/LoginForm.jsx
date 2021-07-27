@@ -39,8 +39,7 @@ export const LoginForm = (props) => {
                 })
             }
         }).then((data) => {
-            authCtx.login(data.idToken)
-            alert("Login!")
+            authCtx.login(data.idToken, emailInput)
             currentUrl.push('/welcome') // don't know if this will work
         }).catch((error) => {
             alert(error.errorMessage + " password is " + passwordInput + " and email is " + emailInput)

@@ -72,7 +72,7 @@ function WithSubnavigation() {
                     justify={'flex-end'}
                     direction={'row'}
                     spacing={6}>
-                    <Link as={ReactLink} to='/welcome'>
+                    <Link as={ReactLink} to='/welcome' style={{ textDecoration: 'none' }}>
                         <Button
                             as={'a'}
                             fontSize={'sm'}
@@ -81,7 +81,7 @@ function WithSubnavigation() {
                             Main Page
                         </Button>
                     </Link>
-                    <Link as={ReactLink} to='/sign-up'>
+                    <Link as={ReactLink} to='/sign-up' style={{ textDecoration: 'none' }}>
                         <Button
                             display={{base: 'none', md: 'inline-flex'}}
                             fontSize={'sm'}

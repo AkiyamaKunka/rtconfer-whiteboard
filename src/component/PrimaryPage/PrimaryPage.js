@@ -10,7 +10,6 @@ import {AuthContext} from "../../store/auth-context/auth-context";
 
 const PrimaryPage = () => {
     const authCtx = useContext(AuthContext)
-
     return (
         <>
             <header>
@@ -23,7 +22,7 @@ const PrimaryPage = () => {
                             { !authCtx.isLogin && <li><Link to={'/login'}>Login</Link></li>}
                             { !authCtx.isLogin && <li><Link to={'/sign-up'}>Sign Up</Link></li>}
                             { authCtx.isLogin && <li><Link to={'/welcome'} onClick={() => {authCtx.logout()}}>Log Out</Link></li>}
-                            { authCtx.isLogin && <li><Link to={'/user-profile'}>User Profile</Link></li>}
+                            { authCtx.isLogin && <li><Link to={`/user-profile-${localStorage.email}`}>User Profile</Link></li>}
                         </ul>
                     </div>
                 </nav>

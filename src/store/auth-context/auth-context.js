@@ -3,6 +3,7 @@ import React, {useState} from 'react'
 export const AuthContext = React.createContext({
     token: '',
     isLogin: false,
+    email: '',
     login: (token) => {
     },
     logout: () => {
@@ -10,22 +11,29 @@ export const AuthContext = React.createContext({
 })
 
 const AuthContextProvider = (props) => {
-    const [token, setToken] = useState(null)
+    const [token, setToken] = useState(localStorage.token)
+    const [email, setEmail] = useState(localStorage.email)
     const [isLogin, setIsLogin ]= useState(!!token) // if token is empty, this will be false
-    const loginHandler = (token) => {
+    const loginHandler = (token, userEmail) => {
         setToken(token)
-        setIsLogin(!!token)
+        setIsLogin(true)
+        setEmail(userEmail)
+        localStorage.setItem('token', token)
+        localStorage.setItem('email', userEmail)
         console.log("logIn from Context!")
         console.log('isLogin is ' + isLogin)
         console.log('token is ' + token)
     }
     const logoutHander = () => {
         setToken(null)
+        setEmail(null)
         setIsLogin(false)
+        localStorage.clear()
     }
     const AuthContextValue = {
         token: token,
         isLogin: isLogin,
+        email: email,
         login: loginHandler,
         logout: logoutHander
     }
