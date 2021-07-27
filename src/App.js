@@ -7,7 +7,7 @@ import {ChakraFooter} from "./component/PrimaryPage/FooterWithTwoColumns/App";
 import SignUp from "./component/SignUpPage/SignUp";
 import WithSubnavigation from "./component/SignUpPage/NavigationBar";
 import AuthContextProvider from "./store/auth-context/auth-context";
-import LoginModule from "./component/LogInPage/LoginWithCentredForm/App";
+import LoginModule from "./component/LogInPage/LoginWithCentredForm/LoginModule";
 
 function App() {
     return (

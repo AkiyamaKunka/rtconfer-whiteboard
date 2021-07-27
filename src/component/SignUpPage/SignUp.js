@@ -18,7 +18,6 @@ import {AuthContext} from "../../store/auth-context/auth-context";
 export default function SignUp() {
 
     const signUpURL = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key='
-    const loginULR = "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key="
     const webAPIKey = "AIzaSyD-zXnqnfkOQnxCELv2BZ4T8zY91X7IBWI"
     const [isLogin, setIsLogin] = useState(false);
 
@@ -30,7 +29,7 @@ export default function SignUp() {
         event.preventDefault()
         const enteredEmail = emailInputRef.current.value
         const enteredPassword = passwordInputRef.current.value
-        fetch((!isLogin ? signUpURL : loginULR) + webAPIKey,
+        fetch((signUpURL  + webAPIKey),
             {
                 method: 'POST',
                 body: JSON.stringify(
@@ -59,7 +58,7 @@ export default function SignUp() {
         ).then((data) => {
             console.log(data)
             authCtx.login(data.idToken)
-            const remindMessage = isLogin ? "login!" : "Sign Up!"
+            const remindMessage = "Sign Up!"
             alert(remindMessage)
         }).catch((error) => {
             alert(error.errorMessage)
