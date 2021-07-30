@@ -29,35 +29,45 @@ export default function SignUp() {
         event.preventDefault()
         const enteredEmail = emailInputRef.current.value
         const enteredPassword = passwordInputRef.current.value
-        fetch((signUpURL  + webAPIKey),
+        // fetch((signUpURL  + webAPIKey),
+        fetch(('http://127.0.0.1:8080/users'),
             {
                 method: 'POST',
                 body: JSON.stringify(
                     {
+                        name: 'akiyama',
                         email: enteredEmail,
                         password: enteredPassword,
+                        // description: 'testForDescription',
                         returnSecureToken: true
                     }
                 ),
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'Authorization' :  'Bearer ' + localStorage.idToken
                 }
             }
         ).then((response) => {
+            // alert('get response!')
+            console.log(response)
+            // console.log(response.json().token)
                 if (response.ok) {
                     setIsLogin(true)
                     return response.json()
                 } else {
                     return response.json().then((data) => {
-                            let errorMessage = "Authentication failed!"
+                            const errorMessage = "Authentication failed!"
                             throw new Error(errorMessage)
                         }
                     )
                 }
             }
-        ).then((data) => {
+        )
+            .then((data) => {
             console.log(data)
-            authCtx.login(data.idToken, enteredEmail)
+            console.log('data should be logged here!')
+                authCtx.login(data.token, enteredEmail)
+            // authCtx.login(data.idToken, enteredEmail)
             const remindMessage = "Sign Up!"
             alert(remindMessage)
         }).catch((error) => {

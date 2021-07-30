@@ -1,22 +1,21 @@
-import React from "react"
-import PrimaryPage from "./component/PrimaryPage/PrimaryPage";
-import {BrowserRouter, Route, Switch, Redirect} from "react-router-dom"
-import {Fragment, useContext} from "react";
-import {ChakraProvider} from "@chakra-ui/react";
-import {ChakraFooter} from "./component/PrimaryPage/FooterWithTwoColumns/App";
-import SignUp from "./component/SignUpPage/SignUp";
-import WithSubnavigation from "./component/SignUpPage/NavigationBar";
-import AuthContextProvider from "./store/auth-context/auth-context";
-import LoginModule from "./component/LogInPage/LoginWithCentredForm/LoginModule";
-import UserMainPage from "./component/UserProfile/UserMainPage";
-import {AuthContext} from "./store/auth-context/auth-context";
+import React from 'react'
+import PrimaryPage from './component/PrimaryPage/PrimaryPage'
+import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom'
+import {Fragment, useContext} from 'react'
+import {ChakraProvider} from '@chakra-ui/react'
+import {ChakraFooter} from './component/PrimaryPage/FooterWithTwoColumns/App'
+import SignUp from './component/SignUpPage/SignUp'
+import WithSubnavigation from './component/SignUpPage/NavigationBar'
+import AuthContextProvider from './store/auth-context/auth-context'
+import LoginModule from './component/LogInPage/LoginWithCentredForm/LoginModule'
+import UserMainPage from './component/UserProfile/UserMainPage'
+import Cart from './component/UserProfile/Conference/CreateConferenceHoverCard'
 
 
 function App() {
-
-
     return (
         <Fragment>
+
             <Switch>
                 <AuthContextProvider>
                     <Route path='*' exact>
@@ -42,6 +41,7 @@ function App() {
                         </ChakraProvider>
                     </Route>
                     <Route path={`/user-profile-${localStorage.email}`}>
+                        {/*<Route path='/user-profile'>*/}
                         <ChakraProvider>
                             <UserMainPage/>
                         </ChakraProvider>
@@ -52,4 +52,4 @@ function App() {
     )
 }
 
-export default App;
+export default App

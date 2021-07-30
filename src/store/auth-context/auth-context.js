@@ -20,7 +20,7 @@ const AuthContextProvider = (props) => {
         setEmail(userEmail)
         localStorage.setItem('token', token)
         localStorage.setItem('email', userEmail)
-        console.log("logIn from Context!")
+        console.log('logIn from Context!')
         console.log('isLogin is ' + isLogin)
         console.log('token is ' + token)
     }

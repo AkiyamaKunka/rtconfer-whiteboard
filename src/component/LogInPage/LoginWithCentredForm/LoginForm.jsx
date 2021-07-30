@@ -40,6 +40,7 @@ export const LoginForm = (props) => {
             }
         }).then((data) => {
             authCtx.login(data.idToken, emailInput)
+            alert("Login!")
             currentUrl.push('/welcome') // don't know if this will work
         }).catch((error) => {
             alert(error.errorMessage + " password is " + passwordInput + " and email is " + emailInput)
@@ -47,10 +48,10 @@ export const LoginForm = (props) => {
     }
 
     return (
-        <chakra.form
-            onSubmit={submitHandler}
-            {...props}
-        >
+        // <chakra.form
+            // onSubmit={submitHandler}
+        //     {...props}
+        // >
             <form onSubmit={submitHandler}>
                 <Stack spacing="6">
                     <FormControl id="email">
@@ -63,6 +64,6 @@ export const LoginForm = (props) => {
                     </Button>
                 </Stack>
             </form>
-        </chakra.form>
+        // </chakra.form>
     )
 }
