@@ -24,7 +24,7 @@ const AuthContextProvider = (props) => {
         console.log('isLogin is ' + isLogin)
         console.log('token is ' + token)
     }
-    const logoutHander = () => {
+    const logoutHandler = () => {
         setToken(null)
         setEmail(null)
         setIsLogin(false)
@@ -35,7 +35,7 @@ const AuthContextProvider = (props) => {
         isLogin: isLogin,
         email: email,
         login: loginHandler,
-        logout: logoutHander
+        logout: logoutHandler
     }
     return (
         <AuthContext.Provider value={AuthContextValue}>

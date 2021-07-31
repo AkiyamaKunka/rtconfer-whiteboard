@@ -1,5 +1,6 @@
 import classes from './Cart.module.css'
 import Modal from '../../UI/Modal'
+import React from 'react'
 
 
 

@@ -1,5 +1,5 @@
 import classes from './PrimaryPage.module.css'
-import logoImage from "../../assets/img/LogoNew.png"
+import logoImage from "../../assets/img/logoChangYang.jpg"
 import {Link} from "react-router-dom";
 import IntroductionSection from "./IntroductionSection";
 import IntroductionImageShowcase from './IntroductionImageShowcase'

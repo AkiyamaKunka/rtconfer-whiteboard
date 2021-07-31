@@ -4,30 +4,31 @@ import ConferenceCard from "./Conference/ConferenceCard";
 import {Switch, Route, useLocation} from 'react-router-dom'
 import Cart from './Conference/CreateConferenceHoverCard'
 import CreateConferenceDrawer from "./Conference/CreateConferenceDrawer";
-
-
+import SessionContextProvider from "../../store/session-context/session-context";
 
 
 const UserMainPage = () => {
 
     return (
         <>
-            <Sidebar style={{display: 'inline'}}>
-                <Route path={`/user-profile-${localStorage.email}`} exact>
-                <h1>Welcome to your user profile!</h1>
-                </Route>
-                <Route path={`/user-profile-${localStorage.email}/conference`}>
-                    <ConferenceCard/>
-                    <ConferenceCard/>
-                    <ConferenceCard/>
-                    <ConferenceCard/>
-                    <ConferenceCard/>
-                </Route>
-                <Route path={`/user-profile-${localStorage.email}/team`}>
-                    <ConferenceCard/>
-                    <ConferenceCard/>
-                </Route>
-            </Sidebar>
+            <SessionContextProvider>
+                <Sidebar style={{display: 'inline'}}>
+                    <Route path={`/user-profile-${localStorage.email}`} exact>
+                        <h1>Welcome to your user profile!</h1>
+                    </Route>
+                    <Route path={`/user-profile-${localStorage.email}/conference`}>
+                        <ConferenceCard/>
+                        <ConferenceCard/>
+                        <ConferenceCard/>
+                        <ConferenceCard/>
+                        <ConferenceCard/>
+                    </Route>
+                    <Route path={`/user-profile-${localStorage.email}/team`}>
+                        <ConferenceCard/>
+                        <ConferenceCard/>
+                    </Route>
+                </Sidebar>
+            </SessionContextProvider>
         </>
     )
 }
