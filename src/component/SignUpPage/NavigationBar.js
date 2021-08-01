@@ -22,11 +22,11 @@ import {
     ChevronRightIcon,
 } from '@chakra-ui/icons';
 import React from "react"
-import { Link as ReactLink} from 'react-router-dom'
+import { Link as ReactLink } from 'react-router-dom'
 
 
-function WithSubnavigation() {
-    const { isOpen, onToggle } = useDisclosure();
+function WithSubnavigation () {
+    const {isOpen, onToggle} = useDisclosure();
 
     return (
         <Box>
@@ -34,8 +34,8 @@ function WithSubnavigation() {
                 bg={useColorModeValue('white', 'gray.800')}
                 color={useColorModeValue('gray.600', 'white')}
                 minH={'60px'}
-                py={{ base: 2 }}
-                px={{ base: 4 }}
+                py={{base: 2}}
+                px={{base: 4}}
                 borderBottom={1}
                 borderStyle={'solid'}
                 borderColor={useColorModeValue('gray.200', 'gray.900')}
@@ -68,11 +68,11 @@ function WithSubnavigation() {
                 {/*</Flex>*/}
 
                 <Stack
-                    flex={{ base: 1, md: 0 }}
+                    flex={{base: 1, md: 0}}
                     justify={'flex-end'}
                     direction={'row'}
                     spacing={6}>
-                    <Link as={ReactLink} to='/welcome' style={{ textDecoration: 'none' }}>
+                    <Link as={ReactLink} to='/welcome' style={{textDecoration: 'none'}}>
                         <Button
                             as={'a'}
                             fontSize={'sm'}
@@ -81,18 +81,18 @@ function WithSubnavigation() {
                             Main Page
                         </Button>
                     </Link>
-                    <Link as={ReactLink} to='/login' style={{ textDecoration: 'none' }}>
-                    <Button
-                        display={{ base: 'none', md: 'inline-flex' }}
-                        fontSize={'sm'}
-                        fontWeight={600}
-                        color={'white'}
-                        bg={'blue.500'}
-                        _hover={{
-                            bg: 'blue.300',
-                        }}>
-                        Login
-                    </Button>
+                    <Link as={ReactLink} to='/login' style={{textDecoration: 'none'}}>
+                        <Button
+                            display={{base: 'none', md: 'inline-flex'}}
+                            fontSize={'sm'}
+                            fontWeight={600}
+                            color={'white'}
+                            bg={'blue.500'}
+                            _hover={{
+                                bg: 'blue.300',
+                            }}>
+                            Login
+                        </Button>
                     </Link>
                 </Stack>
             </Flex>

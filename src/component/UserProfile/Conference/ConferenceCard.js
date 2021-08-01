@@ -1,19 +1,21 @@
 import {
     Heading,
-    Avatar,
     Box,
-    Center,
     Image,
-    Flex,
     Text,
     Stack,
     Button,
-    useColorModeValue,
-} from '@chakra-ui/react';
+    useColorModeValue
+} from '@chakra-ui/react'
 import React from 'react'
-export default function ConferenceCard() {
+import { useHistory } from 'react-router-dom'
+export default function ConferenceCard (props) {
+    const currentUrl = useHistory()
+    const recoverSessionHandler = () => {
+        currentUrl.push(props.session.sessionUrl)
+    }
     return (
-        <Box py={6} style={{ display: 'inline-block', margin: '10px' }}>
+        <Box py={6} style={{display: 'inline-block', margin: '10px'}}>
             <Box
                 maxW={'270px'}
                 w={'full'}
@@ -29,43 +31,32 @@ export default function ConferenceCard() {
                     }
                     objectFit={'cover'}
                 />
-                {/*<Flex justify={'center'} mt={-12}>*/}
-                {/*    <Avatar*/}
-                {/*        size={'xl'}*/}
-                {/*        // src={*/}
-                {/*        //      'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ'*/}
-                {/*        // }*/}
-                {/*        alt={'Author'}*/}
-                {/*        css={{*/}
-                {/*            border: '2px solid white',*/}
-                {/*        }}*/}
-                {/*    />*/}
-                {/*</Flex>*/}
 
-                <Box p={5}>
+                <Box p={5} w={'270px'} h={'290px'}>
                     <Stack spacing={0} align={'center'} mb={5}>
-                        <Heading fontSize={'2xl'} fontWeight={500} fontFamily={'body'}>
-                            Meeting
+                        <Heading fontSize={'xl'} fontWeight={500} fontFamily={'body'}>
+                            {props.session.sessionName}
                         </Heading>
-                        <Text color={'gray.500'}>Kunka. Inc</Text>
+                        <Text color={'gray.500'}>Session Subject</Text>
                     </Stack>
 
                     <Stack direction={'row'} justify={'center'} spacing={6}>
                         <Stack spacing={0} align={'center'}>
-                            <Text fontWeight={600}>July 4th</Text>
+                            <Text fontWeight={600}>{props.session.ownerName}</Text>
                             <Text fontSize={'sm'} color={'gray.500'}>
-                                End Time
+                                Owner
                             </Text>
                         </Stack>
                         <Stack spacing={0} align={'center'}>
-                            <Text fontWeight={600}>13</Text>
+                            <Text fontWeight={600}>{props.session.createDate}</Text>
                             <Text fontSize={'sm'} color={'gray.500'}>
-                                Participants
+                                Date
                             </Text>
                         </Stack>
                     </Stack>
 
                     <Button
+                        onClick={recoverSessionHandler}
                         variant="outline"
                         colorScheme="gray.900"
                         w={'full'}
@@ -77,12 +68,12 @@ export default function ConferenceCard() {
                             transform: 'translateY(-2px)',
                             boxShadow: 'lg',
                             color: 'white',
-                            bg: 'blue.400',
+                            bg: 'blue.400'
                         }}>
                         Recover
                     </Button>
                 </Box>
             </Box>
         </Box>
-    );
+    )
 }

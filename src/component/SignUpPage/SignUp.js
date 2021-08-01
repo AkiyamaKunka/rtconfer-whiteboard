@@ -8,67 +8,62 @@ import {
     Input,
     Link,
     Stack,
-    Image,
-} from '@chakra-ui/react';
-import React from "react"
-import {useRef, useState, useContext} from "react"
-import {AuthContext} from "../../store/auth-context/auth-context";
+    Image
+} from '@chakra-ui/react'
+import React, { useRef, useState, useContext } from 'react'
+import { AuthContext } from '../../store/auth-context/auth-context'
+import API_URL from '../../assets/config-api/api-url'
 
-
-export default function SignUp() {
+export default function SignUp () {
 
     const signUpURL = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key='
-    const webAPIKey = "AIzaSyD-zXnqnfkOQnxCELv2BZ4T8zY91X7IBWI"
-    const [isLogin, setIsLogin] = useState(false);
+    const webAPIKey = 'AIzaSyD-zXnqnfkOQnxCELv2BZ4T8zY91X7IBWI'
+    const [isLogin, setIsLogin] = useState(false)
 
     const authCtx = useContext(AuthContext)
 
     const emailInputRef = useRef()
     const passwordInputRef = useRef()
+    const usernameInputRef = useRef()
     const submitHandler = (event) => {
         event.preventDefault()
         const enteredEmail = emailInputRef.current.value
         const enteredPassword = passwordInputRef.current.value
+        const enteredUsername = usernameInputRef.current.value
         // fetch((signUpURL  + webAPIKey),
-        fetch(('http://127.0.0.1:8080/users'),
+        fetch((API_URL.signUpUrl),
             {
                 method: 'POST',
                 body: JSON.stringify(
                     {
-                        name: 'akiyama',
                         email: enteredEmail,
                         password: enteredPassword,
-                        // description: 'testForDescription',
-                        returnSecureToken: true
+                        username: enteredUsername
                     }
                 ),
                 headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization' :  'Bearer ' + localStorage.idToken
+                    'Content-Type': 'application/json'
                 }
             }
         ).then((response) => {
-            // alert('get response!')
-            console.log(response)
-            // console.log(response.json().token)
-                if (response.ok) {
+
+                console.log(response)
+                // console.log(response.json().token)
+                if ( response.ok ) {
                     setIsLogin(true)
                     return response.json()
                 } else {
                     return response.json().then((data) => {
-                            const errorMessage = "Authentication failed!"
+                            const errorMessage = 'Authentication failed!'
                             throw new Error(errorMessage)
                         }
                     )
                 }
             }
-        )
-            .then((data) => {
+        ).then((data) => {
             console.log(data)
-            console.log('data should be logged here!')
-                authCtx.login(data.token, enteredEmail)
-            // authCtx.login(data.idToken, enteredEmail)
-            const remindMessage = "Sign Up!"
+            authCtx.login(data.token, enteredEmail, enteredUsername, data.user._id)
+            const remindMessage = 'Sign Up!'
             alert(remindMessage)
         }).catch((error) => {
             alert(error.errorMessage)
@@ -85,6 +80,10 @@ export default function SignUp() {
                         <FormControl id="email">
                             <FormLabel>Email address</FormLabel>
                             <Input type="email" ref={emailInputRef}/>
+                        </FormControl>
+                        <FormControl id="username">
+                            <FormLabel>Username</FormLabel>
+                            <Input type="text" ref={usernameInputRef}/>
                         </FormControl>
                         <FormControl id="password">
                             <FormLabel>Password</FormLabel>
@@ -115,5 +114,5 @@ export default function SignUp() {
                 />okay
             </Flex>
         </Stack>
-    );
+    )
 }

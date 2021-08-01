@@ -1,4 +1,3 @@
-
 import classes from './PrimaryPage.module.css'
 import React from 'react'
 import bgImage1 from '../../assets/img/introductionImageShowcase/smbg1.jpg'

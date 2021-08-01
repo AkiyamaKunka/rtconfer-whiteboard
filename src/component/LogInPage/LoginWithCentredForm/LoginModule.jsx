@@ -8,14 +8,14 @@ import {
     VisuallyHidden,
 } from '@chakra-ui/react'
 import * as React from 'react'
-import {FaFacebook, FaGithub, FaGoogle} from 'react-icons/fa'
-import {Card} from './Card'
-import {DividerWithText} from './DividerWithText'
-import {Link} from './Link'
-import {LoginForm} from './LoginForm'
-import {Logo} from './Logo'
-import WithSubnavigation from "./NavigationBar";
-import {Link as ReactLink} from 'react-router-dom'
+import { FaFacebook, FaGithub, FaGoogle } from 'react-icons/fa'
+import { Card } from './Card'
+import { DividerWithText } from './DividerWithText'
+import { Link } from './Link'
+import { LoginForm } from './LoginForm'
+import { Logo } from './Logo'
+import WithSubnavigation from './NavigationBar'
+import { Link as ReactLink } from 'react-router-dom'
 
 
 export const LoginModule = () => {

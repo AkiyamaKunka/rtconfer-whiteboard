@@ -13,13 +13,16 @@ export const AuthContext = React.createContext({
 const AuthContextProvider = (props) => {
     const [token, setToken] = useState(localStorage.token)
     const [email, setEmail] = useState(localStorage.email)
+    const [username, setUsername] = useState('')
     const [isLogin, setIsLogin ]= useState(!!token) // if token is empty, this will be false
-    const loginHandler = (token, userEmail) => {
+    const loginHandler = (token, userEmail, userName, idUser) => {
         setToken(token)
         setIsLogin(true)
         setEmail(userEmail)
         localStorage.setItem('token', token)
+        localStorage.setItem('userName', userName)
         localStorage.setItem('email', userEmail)
+        localStorage.setItem('idUser', idUser)
         console.log('logIn from Context!')
         console.log('isLogin is ' + isLogin)
         console.log('token is ' + token)

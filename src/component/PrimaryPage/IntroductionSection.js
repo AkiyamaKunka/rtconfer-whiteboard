@@ -1,9 +1,9 @@
 import classes from './PrimaryPage.module.css'
 import React from 'react'
-import {ChatbubblesOutline} from 'react-ionicons'
-import {PeopleOutline} from 'react-ionicons'
-import {CreateOutline} from 'react-ionicons'
-import {DesktopOutline} from 'react-ionicons'
+import { ChatbubblesOutline } from 'react-ionicons'
+import { PeopleOutline } from 'react-ionicons'
+import { CreateOutline } from 'react-ionicons'
+import { DesktopOutline } from 'react-ionicons'
 
 const IntroductionSection = () => {
     return (

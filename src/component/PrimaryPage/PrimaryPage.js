@@ -1,12 +1,12 @@
 import classes from './PrimaryPage.module.css'
-import logoImage from "../../assets/img/logoChangYang.jpg"
-import {Link} from "react-router-dom";
-import IntroductionSection from "./IntroductionSection";
+import logoImage from '../../assets/img/mainPageLogo.jpg'
+import { Link } from 'react-router-dom'
+import IntroductionSection from './IntroductionSection'
 import IntroductionImageShowcase from './IntroductionImageShowcase'
-import IntroductionUsageSection from "./IntroductionUsageSection";
+import IntroductionUsageSection from './IntroductionUsageSection'
 import React from 'react'
-import {useContext} from "react";
-import {AuthContext} from "../../store/auth-context/auth-context";
+import { useContext } from 'react'
+import { AuthContext } from '../../store/auth-context/auth-context'
 
 const PrimaryPage = () => {
     const authCtx = useContext(AuthContext)
@@ -17,12 +17,14 @@ const PrimaryPage = () => {
                     <div className={classes.row}>
                         <img src={logoImage} alt="Kunka Food Logo" className={classes.logo}/>
                         <ul className={classes['main-nav']}>
-                            <li><a href="#">How it works</a></li>
-                            <li><a href="#">About Us</a></li>
+                            <li><Link to={'/about_us'}>About Us</Link></li>
                             { !authCtx.isLogin && <li><Link to={'/login'}>Login</Link></li>}
                             { !authCtx.isLogin && <li><Link to={'/sign-up'}>Sign Up</Link></li>}
-                            { authCtx.isLogin && <li><Link to={'/welcome'} onClick={() => {authCtx.logout()}}>Log Out</Link></li>}
-                            { authCtx.isLogin && <li><Link to={`/user-profile-${localStorage.email}`}>User Profile</Link></li>}
+                            {authCtx.isLogin && <li><Link to={'/welcome'} onClick={() => {
+                                authCtx.logout()
+                            }}>Log Out</Link></li>}
+                            {authCtx.isLogin &&
+                            <li><Link to={`/user-profile-${localStorage.email}`}>User Profile</Link></li>}
                         </ul>
                     </div>
                 </nav>

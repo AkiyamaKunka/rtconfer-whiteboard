@@ -22,10 +22,10 @@ import {
     ChevronRightIcon,
 } from '@chakra-ui/icons';
 import React from "react"
-import {Link as ReactLink} from 'react-router-dom'
+import { Link as ReactLink } from 'react-router-dom'
 
 
-function WithSubnavigation() {
+function WithSubnavigation () {
     const {isOpen, onToggle} = useDisclosure();
 
     return (
@@ -72,7 +72,7 @@ function WithSubnavigation() {
                     justify={'flex-end'}
                     direction={'row'}
                     spacing={6}>
-                    <Link as={ReactLink} to='/welcome' style={{ textDecoration: 'none' }}>
+                    <Link as={ReactLink} to='/welcome' style={{textDecoration: 'none'}}>
                         <Button
                             as={'a'}
                             fontSize={'sm'}
@@ -81,7 +81,7 @@ function WithSubnavigation() {
                             Main Page
                         </Button>
                     </Link>
-                    <Link as={ReactLink} to='/sign-up' style={{ textDecoration: 'none' }}>
+                    <Link as={ReactLink} to='/sign-up' style={{textDecoration: 'none'}}>
                         <Button
                             display={{base: 'none', md: 'inline-flex'}}
                             fontSize={'sm'}

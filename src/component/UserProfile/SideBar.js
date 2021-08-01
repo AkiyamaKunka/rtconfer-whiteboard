@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import {
     IconButton,
     Avatar,
@@ -30,13 +30,13 @@ import {
     FiBell,
     FiChevronDown,
 } from 'react-icons/fi';
-import {AiOutlineTeam} from 'react-icons/ai'
-import {FaLaptop} from 'react-icons/fa'
-import {IconType} from 'react-icons';
-import {ReactText, useContext} from 'react';
-import {Link as ReactLink} from 'react-router-dom'
-import {BiVideoPlus} from 'react-icons/bi'
-import {AuthContext} from "../../store/auth-context/auth-context";
+import { AiOutlineTeam } from 'react-icons/ai'
+import { FaLaptop } from 'react-icons/fa'
+import { IconType } from 'react-icons';
+import { ReactText, useContext } from 'react';
+import { Link as ReactLink } from 'react-router-dom'
+import { BiVideoPlus } from 'react-icons/bi'
+import { AuthContext } from "../../store/auth-context/auth-context";
 import CreateConferenceDrawer from "./Conference/CreateConferenceDrawer";
 import CreateTeamDrawer from "./Team/CreateTeamDrawer";
 
@@ -48,7 +48,7 @@ const LinkItems = [
     {name: 'Settings', icon: FiSettings, toLink: '#'},
 ];
 
-export default function Sidebar(props) {
+export default function Sidebar (props) {
     const {isOpen, onOpen, onClose} = useDisclosure();
     return (
         <Box minH="100vh" bg={useColorModeValue('gray.100', 'gray.900')}>
@@ -104,7 +104,7 @@ const SidebarContent = ({onClose, ...rest}) => {
                 <CloseButton display={{base: 'flex', md: 'none'}} onClick={onClose}/>
             </Flex>
             {LinkItems.map((link) => (
-                <Link as={ReactLink} to={link.toLink} style={{ textDecoration: 'none' }}>
+                <Link as={ReactLink} to={link.toLink} style={{textDecoration: 'none'}}>
                     <NavItem key={link.name} icon={link.icon}>
                         {link.name}
                     </NavItem>
@@ -255,10 +255,12 @@ const MobileNav = ({onOpen, ...rest}) => {
                             <MenuDivider/>
                             <Link as={ReactLink}
                                   to='/welcome'
-                                  onClick={ () => {authCtx.logout()}}
+                                  onClick={() => {
+                                      authCtx.logout()
+                                  }}
                                   style={{textDecoration: 'none'}}
                             >
-                            <MenuItem>Log out</MenuItem>
+                                <MenuItem>Log out</MenuItem>
                             </Link>
                         </MenuList>
                     </Menu>

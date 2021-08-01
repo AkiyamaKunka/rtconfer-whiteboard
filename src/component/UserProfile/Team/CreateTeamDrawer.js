@@ -37,7 +37,7 @@ import {
 } from "@chakra-ui/react"
 import React from 'react'
 
-import{
+import {
     AddIcon,
 } from '@chakra-ui/icons'
 
@@ -56,7 +56,7 @@ const CreateTeamDrawer = () => {
                     bg={useColorModeValue('white', 'gray.700')}
                     color={'gray.700'}
                     rounded={'md'}
-                    leftIcon={ <AddIcon/> }
+                    leftIcon={<AddIcon/>}
                     _hover={{
                         transform: 'translateY(-2px)',
                         boxShadow: 'lg',

@@ -6,24 +6,8 @@ import {
     DrawerOverlay,
     DrawerContent,
     DrawerCloseButton,
-    IconButton,
-    Avatar,
     Box,
-    CloseButton,
-    Flex,
-    HStack,
-    VStack,
-    Icon,
     useColorModeValue,
-    Link,
-    Text,
-    BoxProps,
-    FlexProps,
-    Menu,
-    MenuButton,
-    MenuDivider,
-    MenuItem,
-    MenuList,
     Stack,
     FormLabel,
     Input,
@@ -34,38 +18,35 @@ import {
     Textarea,
     useDisclosure,
     Button,
-    UnorderedList,
-    ListItem,
     Accordion,
     AccordionItem,
     AccordionButton,
     AccordionPanel,
     AccordionIcon,
-    Radio,
-    RadioGroup,
-    Checkbox,
-    CheckboxGroup
-} from "@chakra-ui/react"
-import React, {useState, useContext, useEffect, useRef} from 'react'
-import {BiVideoPlus} from 'react-icons/bi'
-import {SessionContext} from "../../../store/session-context/session-context"
+    Checkbox
+} from '@chakra-ui/react'
+import React, { useState, useContext, useEffect, useRef } from 'react'
+import { BiVideoPlus } from 'react-icons/bi'
+import { SessionContext } from '../../../store/session-context/session-context'
 
 
 const CreateConferenceDrawer = (props) => {
     const {isOpen, onOpen, onClose} = useDisclosure()
     const sessionNameRef = useRef()
     const descriptionRef = useRef()
+    const sessionUrlRef = useRef()
     const sessionCtx = useContext(SessionContext)
     const [usersSelectedInSession, setUsersSelectedInSession] = useState(new Set())
     useEffect(() => {
         sessionCtx.getAllUsers()
+
     }, [])
 
     const addOrDeleteSelectedSessionMembersHandler = (idUser) => {
         console.log(idUser)
-        if(usersSelectedInSession.has(idUser)){ // delete this session candidate
+        if ( usersSelectedInSession.has(idUser) ) { // delete this session candidate
             setUsersSelectedInSession(prev => new Set([...prev].filter(id => id !== idUser)))
-        }else{ // add this user to session candidate list
+        } else { // add this user to session candidate list
             setUsersSelectedInSession(prev => new Set([...prev, idUser]))
         }
         console.log(usersSelectedInSession)
@@ -75,7 +56,9 @@ const CreateConferenceDrawer = (props) => {
         event.preventDefault()
         const descriptionInput = descriptionRef.current.value
         const sessionNameInput = sessionNameRef.current.value
-        sessionCtx.createSession([...usersSelectedInSession], sessionNameInput, descriptionInput)
+        const sessionUrlInput = sessionUrlRef.current.value
+        sessionCtx.createSession([...usersSelectedInSession], sessionNameInput, descriptionInput, sessionUrlInput)
+        sessionCtx.getAllSessions() // update sessions info
     }
 
     return (
@@ -95,7 +78,7 @@ const CreateConferenceDrawer = (props) => {
                         transform: 'translateY(-2px)',
                         boxShadow: 'lg',
                         color: 'white',
-                        bg: 'blue.400',
+                        bg: 'blue.400'
                     }}
             >
                 New Session
@@ -143,9 +126,9 @@ const CreateConferenceDrawer = (props) => {
                                                             key={user.idUser}
                                                             size="md"
                                                             colorScheme="blue"
-                                                            onChange={ () => addOrDeleteSelectedSessionMembersHandler(user.idUser)}
+                                                            onChange={() => addOrDeleteSelectedSessionMembersHandler(user.idUser)}
                                                         >
-                                                            {user.idName}
+                                                            {user.userName}
                                                         </Checkbox>)}
                                                 </Stack>
                                             </AccordionPanel>
@@ -158,8 +141,9 @@ const CreateConferenceDrawer = (props) => {
                                     <InputGroup>
                                         <InputLeftAddon>http://</InputLeftAddon>
                                         <Input
-                                            type="url"
+                                            type="text"
                                             id="url"
+                                            ref={sessionUrlRef}
                                             placeholder="Enter domain"
                                         />
                                         <InputRightAddon>.com</InputRightAddon>
@@ -185,7 +169,7 @@ const CreateConferenceDrawer = (props) => {
                             <Button variant="outline" mr={3} onClick={onClose}>
                                 Cancel
                             </Button>
-                            <Button colorScheme="blue" type='submit' >Submit</Button>
+                            <Button colorScheme="blue" type="submit">Submit</Button>
                         </DrawerFooter>
                     </DrawerContent>
                 </form>
