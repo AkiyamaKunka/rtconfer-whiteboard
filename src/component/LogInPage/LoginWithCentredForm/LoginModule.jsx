@@ -1,14 +1,10 @@
 import {
     Box,
-    Button,
     Heading,
-    SimpleGrid,
     Text,
-    useColorModeValue,
-    VisuallyHidden,
+    useColorModeValue
 } from '@chakra-ui/react'
 import * as React from 'react'
-import { FaFacebook, FaGithub, FaGoogle } from 'react-icons/fa'
 import { Card } from './Card'
 import { DividerWithText } from './DividerWithText'
 import { Link } from './Link'
@@ -17,9 +13,7 @@ import { Logo } from './Logo'
 import WithSubnavigation from './NavigationBar'
 import { Link as ReactLink } from 'react-router-dom'
 
-
 export const LoginModule = () => {
-
 
     return (
         <>
@@ -30,7 +24,7 @@ export const LoginModule = () => {
                 py="12"
                 px={{
                     base: '4',
-                    lg: '8',
+                    lg: '8'
                 }}
             >
                 <Box maxW="md" mx="auto">
@@ -39,7 +33,7 @@ export const LoginModule = () => {
                         h="8"
                         mb={{
                             base: '10',
-                            md: '20',
+                            md: '20'
                         }}
                     />
                     <Heading textAlign="center" size="xl" fontWeight="extrabold">
@@ -52,20 +46,6 @@ export const LoginModule = () => {
                     <Card>
                         <LoginForm/>
                         <DividerWithText mt="6">More ways for login coming soon...</DividerWithText>
-                        {/*<SimpleGrid mt="6" columns={3} spacing="3">*/}
-                        {/*  <Button color="currentColor" variant="outline">*/}
-                        {/*    <VisuallyHidden>Login with Facebook</VisuallyHidden>*/}
-                        {/*    <FaFacebook />*/}
-                        {/*  </Button>*/}
-                        {/*  <Button color="currentColor" variant="outline">*/}
-                        {/*    <VisuallyHidden>Login with Google</VisuallyHidden>*/}
-                        {/*    <FaGoogle />*/}
-                        {/*  </Button>*/}
-                        {/*  <Button color="currentColor" variant="outline">*/}
-                        {/*    <VisuallyHidden>Login with Github</VisuallyHidden>*/}
-                        {/*    <FaGithub />*/}
-                        {/*  </Button>*/}
-                        {/*</SimpleGrid>*/}
                     </Card>
                 </Box>
             </Box>

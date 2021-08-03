@@ -25,9 +25,12 @@ import {
     AccordionIcon,
     Checkbox
 } from '@chakra-ui/react'
-import React, { useState, useContext, useEffect, useRef } from 'react'
+import React, { useState, useContext, useRef } from 'react'
 import { BiVideoPlus } from 'react-icons/bi'
+import { AuthContext } from '../../../store/auth-context/auth-context'
 import { SessionContext } from '../../../store/session-context/session-context'
+import DUMMY_DATA from '../../../assets/dummy-data/DUMMY_DATA'
+
 
 
 const CreateConferenceDrawer = (props) => {
@@ -36,11 +39,8 @@ const CreateConferenceDrawer = (props) => {
     const descriptionRef = useRef()
     const sessionUrlRef = useRef()
     const sessionCtx = useContext(SessionContext)
+    const authCtx = useContext(AuthContext)
     const [usersSelectedInSession, setUsersSelectedInSession] = useState(new Set())
-    useEffect(() => {
-        sessionCtx.getAllUsers()
-
-    }, [])
 
     const addOrDeleteSelectedSessionMembersHandler = (idUser) => {
         console.log(idUser)
@@ -63,7 +63,10 @@ const CreateConferenceDrawer = (props) => {
 
     return (
         <>
-            <Button onClick={onOpen}
+            <Button onClick={() => {
+                onOpen()
+                authCtx.getAllUsers()
+            }}
                     variant="outline"
                     colorScheme="gray.700"
                     w={'180px'}
@@ -121,7 +124,7 @@ const CreateConferenceDrawer = (props) => {
                                             </h2>
                                             <AccordionPanel pb={4}>
                                                 <Stack>
-                                                    {sessionCtx.usersInfo.map((user) =>
+                                                    {authCtx.usersInfo.map((user) =>
                                                         <Checkbox
                                                             key={user.idUser}
                                                             size="md"
@@ -153,7 +156,7 @@ const CreateConferenceDrawer = (props) => {
                                 <Box>
                                     <FormLabel htmlFor="owner">Select Owner</FormLabel>
                                     <Select id="owner" defaultValue="segun">
-                                        {props.dummyUsers.map((item) => <option
+                                        {DUMMY_DATA.dummyUsersWJJ.map((item) => <option
                                             value={item.username}>{item.username}</option>)}
                                     </Select>
                                 </Box>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {
     IconButton,
     Avatar,
@@ -14,42 +14,44 @@ import {
     DrawerContent,
     Text,
     useDisclosure,
-    BoxProps,
-    FlexProps,
     Menu,
     MenuButton,
     MenuDivider,
     MenuItem,
     MenuList,
-    Button,
-} from '@chakra-ui/react';
+} from '@chakra-ui/react'
 import {
     FiHome,
     FiSettings,
     FiMenu,
     FiBell,
-    FiChevronDown,
-} from 'react-icons/fi';
+    FiChevronDown
+} from 'react-icons/fi'
 import { AiOutlineTeam } from 'react-icons/ai'
 import { FaLaptop } from 'react-icons/fa'
-import { IconType } from 'react-icons';
-import { ReactText, useContext } from 'react';
 import { Link as ReactLink } from 'react-router-dom'
-import { BiVideoPlus } from 'react-icons/bi'
-import { AuthContext } from "../../store/auth-context/auth-context";
-import CreateConferenceDrawer from "./Conference/CreateConferenceDrawer";
-import CreateTeamDrawer from "./Team/CreateTeamDrawer";
-
+import { AuthContext } from '../../store/auth-context/auth-context'
+import CreateConferenceDrawer from './Conference/CreateConferenceDrawer'
+import CreateTeamDrawer from './Team/CreateTeamDrawer'
 
 const LinkItems = [
     {name: 'Home', icon: FiHome, toLink: '/welcome'},
-    {name: 'Team', icon: AiOutlineTeam, toLink: `/user-profile-${localStorage.email}/team`},
-    {name: 'Conference', icon: FaLaptop, toLink: `/user-profile-${localStorage.email}/conference`},
-    {name: 'Settings', icon: FiSettings, toLink: '#'},
-];
+    {
+        name: 'Team',
+        icon: AiOutlineTeam,
+        toLink: `/user-profile-${localStorage.email}/team`
+    },
+    {
+        name: 'Conference',
+        icon: FaLaptop,
+        toLink: `/user-profile-${localStorage.email}/conference`
+    },
+    {name: 'Settings', icon: FiSettings, toLink: '#'}
+]
+
 
 export default function Sidebar (props) {
-    const {isOpen, onOpen, onClose} = useDisclosure();
+    const {isOpen, onOpen, onClose} = useDisclosure()
     return (
         <Box minH="100vh" bg={useColorModeValue('gray.100', 'gray.900')}>
             <SidebarContent
@@ -63,7 +65,8 @@ export default function Sidebar (props) {
                 onClose={onClose}
                 returnFocusOnClose={false}
                 onOverlayClick={onClose}
-                size="full">
+                size="full"
+            >
                 <DrawerContent>
                     <SidebarContent onClose={onClose}/>
                 </DrawerContent>
@@ -74,16 +77,9 @@ export default function Sidebar (props) {
                 {props.children}
             </Box>
         </Box>
-    );
-}
+    )
 
-// interface
-// SidebarProps
-// extends
-// BoxProps
-// {
-//     onClose: () => void;
-// }
+}
 
 const SidebarContent = ({onClose, ...rest}) => {
     return (
@@ -95,7 +91,8 @@ const SidebarContent = ({onClose, ...rest}) => {
             w={{base: 'full', md: 60}}
             pos="fixed"
             h="full"
-            {...rest}>
+            {...rest}
+        >
             <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
                 <Text fontSize="2xl" fontFamily="monospace" fontWeight="bold">
                     RTConfer
@@ -104,24 +101,19 @@ const SidebarContent = ({onClose, ...rest}) => {
                 <CloseButton display={{base: 'flex', md: 'none'}} onClick={onClose}/>
             </Flex>
             {LinkItems.map((link) => (
-                <Link as={ReactLink} to={link.toLink} style={{textDecoration: 'none'}}>
+                <Link
+                    as={ReactLink}
+                    to={link.toLink}
+                    style={{textDecoration: 'none'}}
+                >
                     <NavItem key={link.name} icon={link.icon}>
                         {link.name}
                     </NavItem>
                 </Link>
             ))}
         </Box>
-    );
-};
-
-// interface
-// NavItemProps
-// extends
-// FlexProps
-// {
-//     icon: IconType;
-//     children: ReactText;
-// }
+    )
+}
 const NavItem = ({icon, children, ...rest}) => {
     return (
         <Link href="#" style={{textDecoration: 'none'}}>
@@ -134,15 +126,16 @@ const NavItem = ({icon, children, ...rest}) => {
                 cursor="pointer"
                 _hover={{
                     bg: 'blue.400',
-                    color: 'white',
+                    color: 'white'
                 }}
-                {...rest}>
+                {...rest}
+            >
                 {icon && (
                     <Icon
                         mr="4"
                         fontSize="16"
                         _groupHover={{
-                            color: 'white',
+                            color: 'white'
                         }}
                         as={icon}
                     />
@@ -150,36 +143,10 @@ const NavItem = ({icon, children, ...rest}) => {
                 {children}
             </Flex>
         </Link>
-    );
-};
-
-const DummyUsers = [
-    {
-        username: 'AkiyamaKunka',
-        email: 'junjia.wang@wisc.edu',
-    },
-    {
-        username: 'JamesYang',
-        email: 'youyi.yang@nankai.edu',
-    },
-    {
-        username: 'ParadoxHzy',
-        email: 'ziyi.huang@nankai.edu',
-    },
-    {
-        username: 'HaoranYu',
-        email: 'haoran.yu@uiuc.edu',
-    },
-]
+    )
+}
 
 
-// interface
-// MobileProps
-// extends
-// FlexProps
-// {
-//     onOpen: () => void;
-// }
 const MobileNav = ({onOpen, ...rest}) => {
     const authCtx = useContext(AuthContext)
 
@@ -193,7 +160,8 @@ const MobileNav = ({onOpen, ...rest}) => {
             borderBottomWidth="1px"
             borderBottomColor={useColorModeValue('gray.200', 'gray.700')}
             justifyContent={{base: 'space-between', md: 'flex-end'}}
-            {...rest}>
+            {...rest}
+        >
             <IconButton
                 display={{base: 'flex', md: 'none'}}
                 onClick={onOpen}
@@ -205,12 +173,14 @@ const MobileNav = ({onOpen, ...rest}) => {
                 display={{base: 'flex', md: 'none'}}
                 fontSize="2xl"
                 fontFamily="monospace"
-                fontWeight="bold">
+                fontWeight="bold"
+            >
                 RTConfer
             </Text>
 
             <CreateTeamDrawer/>
-            <CreateConferenceDrawer dummyUsers={DummyUsers}/>
+            <CreateConferenceDrawer/>
+
             <HStack spacing={{base: '0', md: '6'}}>
                 <IconButton
                     size="lg"
@@ -237,7 +207,7 @@ const MobileNav = ({onOpen, ...rest}) => {
                                     alignItems="flex-start"
                                     spacing="1px"
                                     ml="2">
-                                    <Text fontSize="sm">Kunka Akiyama</Text>
+                                    <Text fontSize="sm">{localStorage.userName}</Text>
                                     <Text fontSize="xs" color="gray.600">
                                         user
                                     </Text>
@@ -254,7 +224,7 @@ const MobileNav = ({onOpen, ...rest}) => {
                             <MenuItem>Notification</MenuItem>
                             <MenuDivider/>
                             <Link as={ReactLink}
-                                  to='/welcome'
+                                  to="/welcome"
                                   onClick={() => {
                                       authCtx.logout()
                                   }}
@@ -267,5 +237,5 @@ const MobileNav = ({onOpen, ...rest}) => {
                 </Flex>
             </HStack>
         </Flex>
-    );
-};
+    )
+}

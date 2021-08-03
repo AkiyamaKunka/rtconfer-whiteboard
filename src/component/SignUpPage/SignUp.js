@@ -10,18 +10,14 @@ import {
     Stack,
     Image
 } from '@chakra-ui/react'
-import React, { useRef, useState, useContext } from 'react'
+import React, { useRef, useContext } from 'react'
 import { AuthContext } from '../../store/auth-context/auth-context'
 import API_URL from '../../assets/config-api/api-url'
+import { useHistory } from 'react-router-dom'
 
 export default function SignUp () {
-
-    const signUpURL = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key='
-    const webAPIKey = 'AIzaSyD-zXnqnfkOQnxCELv2BZ4T8zY91X7IBWI'
-    const [isLogin, setIsLogin] = useState(false)
-
+    const currentUrl = useHistory()
     const authCtx = useContext(AuthContext)
-
     const emailInputRef = useRef()
     const passwordInputRef = useRef()
     const usernameInputRef = useRef()
@@ -30,46 +26,8 @@ export default function SignUp () {
         const enteredEmail = emailInputRef.current.value
         const enteredPassword = passwordInputRef.current.value
         const enteredUsername = usernameInputRef.current.value
-        // fetch((signUpURL  + webAPIKey),
-        fetch((API_URL.signUpUrl),
-            {
-                method: 'POST',
-                body: JSON.stringify(
-                    {
-                        email: enteredEmail,
-                        password: enteredPassword,
-                        username: enteredUsername
-                    }
-                ),
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            }
-        ).then((response) => {
-
-                console.log(response)
-                // console.log(response.json().token)
-                if ( response.ok ) {
-                    setIsLogin(true)
-                    return response.json()
-                } else {
-                    return response.json().then((data) => {
-                            const errorMessage = 'Authentication failed!'
-                            throw new Error(errorMessage)
-                        }
-                    )
-                }
-            }
-        ).then((data) => {
-            console.log(data)
-            authCtx.login(data.token, enteredEmail, enteredUsername, data.user._id)
-            const remindMessage = 'Sign Up!'
-            alert(remindMessage)
-        }).catch((error) => {
-            alert(error.errorMessage)
-        })
+        authCtx.signIn(enteredEmail, enteredPassword, enteredUsername, currentUrl)
     }
-
 
     return (
         <Stack minH={'100vh'} direction={{base: 'column', md: 'row'}}>

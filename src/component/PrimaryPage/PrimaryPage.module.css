@@ -120,6 +120,23 @@ header {
     word-spacing: 4px;
 }
 
+.hero-text-box button {
+    display: inline-block;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+    color: #3498db;
+    border: 1px solid #3498db;
+    padding: 10px 23px;
+}
+.hero-text-box button:hover {
+    background-color: #2980b9;
+    border: 1px solid #2980b9;
+    margin: 0 4px 0 0;
+    color: white;
+}
+
 /*--------------NAVIGATION-------------*/
 
 .logo {

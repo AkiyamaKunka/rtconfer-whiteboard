@@ -5,11 +5,15 @@ import {
     Text,
     Stack,
     Button,
-    useColorModeValue
+    useColorModeValue,
+    CloseButton
 } from '@chakra-ui/react'
-import React from 'react'
+import React, { useContext } from 'react'
 import { useHistory } from 'react-router-dom'
+import { SessionContext } from '../../../store/session-context/session-context'
+
 export default function ConferenceCard (props) {
+    const sessionCtx = useContext(SessionContext)
     const currentUrl = useHistory()
     const recoverSessionHandler = () => {
         currentUrl.push(props.session.sessionUrl)
@@ -23,14 +27,16 @@ export default function ConferenceCard (props) {
                 boxShadow={'2xl'}
                 rounded={'md'}
                 overflow={'hidden'}>
-                <Image
+
+                <Box
                     h={'120px'}
                     w={'full'}
-                    src={
-                        'https://images.unsplash.com/photo-1612865547334-09cb8cb455da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80'
-                    }
-                    objectFit={'cover'}
-                />
+                    backgroundImage="url('https://images.unsplash.com/photo-1612865547334-09cb8cb455da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80')"
+                    backgroundPosition="center"
+                    backgroundRepeat="no-repeat"
+
+                > <CloseButton size="md" color={'white'} onClick={ () => {sessionCtx.deleteSession(props.session.idSession)} } /> </Box>
+
 
                 <Box p={5} w={'270px'} h={'290px'}>
                     <Stack spacing={0} align={'center'} mb={5}>
@@ -42,13 +48,13 @@ export default function ConferenceCard (props) {
 
                     <Stack direction={'row'} justify={'center'} spacing={6}>
                         <Stack spacing={0} align={'center'}>
-                            <Text fontWeight={600}>{props.session.ownerName}</Text>
+                            <Text fontWeight={600}>Name</Text>
                             <Text fontSize={'sm'} color={'gray.500'}>
                                 Owner
                             </Text>
                         </Stack>
                         <Stack spacing={0} align={'center'}>
-                            <Text fontWeight={600}>{props.session.createDate}</Text>
+                            <Text fontWeight={600}>Time</Text>
                             <Text fontSize={'sm'} color={'gray.500'}>
                                 Date
                             </Text>

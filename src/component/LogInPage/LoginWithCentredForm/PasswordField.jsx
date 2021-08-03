@@ -9,7 +9,7 @@ import {
     InputRightElement,
     useDisclosure,
     useMergeRefs,
-    useColorModeValue as mode,
+    useColorModeValue as mode
 } from '@chakra-ui/react'
 import * as React from 'react'
 import { HiEye, HiEyeOff } from 'react-icons/hi'
@@ -25,7 +25,7 @@ export const PasswordField = React.forwardRef((props, ref) => {
 
         if ( input ) {
             input.focus({
-                preventScroll: true,
+                preventScroll: true
             })
             const length = input.value.length * 2
             requestAnimationFrame(() => {

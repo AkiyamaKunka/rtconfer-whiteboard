@@ -7,11 +7,11 @@ export const Link = (props) => (
         href="#"
         color={useColorModeValue('blue.500', 'blue.200')}
         _hover={{
-            color: useColorModeValue('blue.600', 'blue.300'),
+            color: useColorModeValue('blue.600', 'blue.300')
         }}
         display={{
             base: 'block',
-            sm: 'inline',
+            sm: 'inline'
         }}
         {...props}
     />
