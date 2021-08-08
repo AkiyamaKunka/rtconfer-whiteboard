@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import DUMMY_DATA from '../../assets/dummy-data/DUMMY_DATA'
 import API_URL from '../../assets/config-api/api-url'
 import { useHistory } from 'react-router-dom'
+import { useToast } from '@chakra-ui/react'
 
 export const AuthContext = React.createContext({
     token: '',
@@ -20,18 +21,23 @@ export const AuthContext = React.createContext({
 
 const AuthContextProvider = (props) => {
 
+    const successLogToast = useToast()
+    const errorLogToast = useToast()
+    const successRegisterToast = useToast()
+    const errorRegisterToast = useToast()
     const [usersInfoServer, setUsersInfoServer] = useState(DUMMY_DATA.dummyUsersInfoWJJ)
     const [token, setToken] = useState(localStorage.token)
     const [email, setEmail] = useState(localStorage.email)
-    const [isLogin, setIsLogin] = useState( !!token) // if token is empty, this will be false
-    const loginStatusSetHandler = (token, userEmail, userName, idUser, currentUrl) => {
-        setToken(token)
+    const [isLogin, setIsLogin] = useState(false) // if token is empty, this will be false
+    const loginStatusSetHandler = (tokenEntered, userEmail, userName, idUser, currentUrl) => {
+        setToken(tokenEntered)
         setIsLogin(true)
         setEmail(userEmail)
-        localStorage.setItem('token', token)
+        localStorage.setItem('token', tokenEntered)
         localStorage.setItem('userName', userName)
         localStorage.setItem('email', userEmail)
         localStorage.setItem('idUser', idUser)
+
         console.log('logIn from Context!')
         console.log('isLogin is ' + isLogin)
         console.log('token is ' + token)
@@ -46,7 +52,7 @@ const AuthContextProvider = (props) => {
     const getAllUsersHandler = () => {
         console.log('trying to get users from server')
         // console.log(localStorage.token)
-        fetch((API_URL.getAllUsersUrl), {
+        fetch(( API_URL.getAllUsersUrl ), {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -55,7 +61,7 @@ const AuthContextProvider = (props) => {
         }).then((response) => {
             console.log(response)
             console.log('response should be here!')
-            if ( response.ok ) {
+            if( response.ok ) {
                 return response.json()
             } else {
                 return response.json().then((data) => {
@@ -72,7 +78,7 @@ const AuthContextProvider = (props) => {
         })
     }
     const loginHandler = (enteredEmail, enteredPassword, currentUrl) => {
-        fetch((API_URL.loginUrl),
+        fetch(( API_URL.loginUrl ),
             {
                 method: 'POST',
                 body: JSON.stringify(
@@ -85,7 +91,7 @@ const AuthContextProvider = (props) => {
                     'Content-Type': 'application/json'
                 }
             }).then((response) => {
-            if ( response.ok ) {
+            if( response.ok ) {
                 return response.json()
             } else {
                 return response.json.then((data) => {
@@ -95,13 +101,25 @@ const AuthContextProvider = (props) => {
             }
         }).then((data) => {
             loginStatusSetHandler(data.token, enteredEmail, data.user.userName, data.user.idUser, currentUrl)
-            alert('Login!')
+            successLogToast({
+                title: 'Login successfully.',
+                description: 'You have logged in successfully.',
+                status: 'success',
+                duration: 4000,
+                isClosable: true
+            })
         }).catch((error) => {
-            alert(error.errorMessage)
+            errorLogToast({
+                title: 'Login failed.',
+                description: 'Please check whether the email address matches the password.',
+                status: 'error',
+                duration: 4000,
+                isClosable: true
+            })
         })
     }
     const signInHandler = (enteredEmail, enteredPassword, enteredUsername, currentUrl) => {
-        fetch((API_URL.signUpUrl),
+        fetch(( API_URL.signUpUrl ),
             {
                 method: 'POST',
                 body: JSON.stringify(
@@ -119,7 +137,7 @@ const AuthContextProvider = (props) => {
 
                 console.log(response)
                 // console.log(response.json().token)
-                if ( response.ok ) {
+                if( response.ok ) {
                     setIsLogin(true)
                     return response.json()
                 } else {
@@ -133,13 +151,23 @@ const AuthContextProvider = (props) => {
         ).then((data) => {
             console.log(data)
             loginStatusSetHandler(data.token, enteredEmail, enteredUsername, data.user.idUser, currentUrl)
-            const remindMessage = 'Sign Up!'
-            alert(remindMessage)
+            successRegisterToast({
+                title: 'Account created.',
+                description: 'We\'ve created your account for you.',
+                status: 'success',
+                duration: 4000,
+                isClosable: true
+            })
         }).catch((error) => {
-            alert(error.errorMessage)
+            errorRegisterToast({
+                title: 'An error occurred.',
+                description: 'Please check whether the password is greater than or equal to eight characters. If yes, your mailbox may have been registered. Please change your mailbox',
+                status: 'error',
+                duration: 4000,
+                isClosable: true
+            })
         })
     }
-
 
     const AuthContextValue = {
         token: token,

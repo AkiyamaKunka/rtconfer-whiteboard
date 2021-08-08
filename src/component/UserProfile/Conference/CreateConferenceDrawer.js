@@ -31,10 +31,8 @@ import { AuthContext } from '../../../store/auth-context/auth-context'
 import { SessionContext } from '../../../store/session-context/session-context'
 import DUMMY_DATA from '../../../assets/dummy-data/DUMMY_DATA'
 
-
-
-const CreateConferenceDrawer = (props) => {
-    const {isOpen, onOpen, onClose} = useDisclosure()
+const CreateConferenceDrawer = () => {
+    const { isOpen, onOpen, onClose } = useDisclosure()
     const sessionNameRef = useRef()
     const descriptionRef = useRef()
     const sessionUrlRef = useRef()
@@ -44,7 +42,7 @@ const CreateConferenceDrawer = (props) => {
 
     const addOrDeleteSelectedSessionMembersHandler = (idUser) => {
         console.log(idUser)
-        if ( usersSelectedInSession.has(idUser) ) { // delete this session candidate
+        if( usersSelectedInSession.has(idUser) ) { // delete this session candidate
             setUsersSelectedInSession(prev => new Set([...prev].filter(id => id !== idUser)))
         } else { // add this user to session candidate list
             setUsersSelectedInSession(prev => new Set([...prev, idUser]))
@@ -57,6 +55,7 @@ const CreateConferenceDrawer = (props) => {
         const descriptionInput = descriptionRef.current.value
         const sessionNameInput = sessionNameRef.current.value
         const sessionUrlInput = sessionUrlRef.current.value
+        console.log('session \'s url is' + sessionUrlInput)
         sessionCtx.createSession([...usersSelectedInSession], sessionNameInput, descriptionInput, sessionUrlInput)
         sessionCtx.getAllSessions() // update sessions info
     }
@@ -108,6 +107,7 @@ const CreateConferenceDrawer = (props) => {
                                         ref={sessionNameRef}
                                         id="sessionName"
                                         placeholder="Please enter session name"
+                                        maxLength={16}
                                     />
                                 </Box>
 
@@ -148,6 +148,7 @@ const CreateConferenceDrawer = (props) => {
                                             id="url"
                                             ref={sessionUrlRef}
                                             placeholder="Enter domain"
+                                            required={true}
                                         />
                                         <InputRightAddon>.com</InputRightAddon>
                                     </InputGroup>
@@ -163,7 +164,7 @@ const CreateConferenceDrawer = (props) => {
 
                                 <Box>
                                     <FormLabel htmlFor="desc">Description</FormLabel>
-                                    <Textarea id="desc" ref={descriptionRef}/>
+                                    <Textarea id="desc" ref={descriptionRef} required={true}/>
                                 </Box>
                             </Stack>
 

@@ -22,14 +22,13 @@ const PrimaryPage = () => {
                     <div className={classes.row}>
                         <img src={logoImage} alt="Kunka Food Logo" className={classes.logo}/>
                         <ul className={classes['main-nav']}>
-                            <li><a href="#">How it works</a></li>
                             <li><Link to={'/about_us'}>About Us</Link></li>
-                            { !authCtx.isLogin && <li><Link to={'/login'}>Login</Link></li>}
-                            { !authCtx.isLogin && <li><Link to={'/sign-up'}>Sign Up</Link></li>}
-                            {authCtx.isLogin && <li><Link to={'/welcome'} onClick={() => {
+                            { !localStorage.getItem('token') && <li><Link to={'/login'}>Login</Link></li>}
+                            { !localStorage.getItem('token') && <li><Link to={'/sign-up'}>Sign Up</Link></li>}
+                            {localStorage.getItem('token') && <li><Link to={'/welcome'} onClick={() => {
                                 authCtx.logout()
                             }}>Log Out</Link></li>}
-                            {authCtx.isLogin &&
+                            {localStorage.getItem('token') &&
                             <li><Link to={`/user-profile-${localStorage.email}`}>User Profile</Link></li>}
                         </ul>
                     </div>

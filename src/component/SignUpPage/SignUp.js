@@ -6,16 +6,14 @@ import {
     FormLabel,
     Heading,
     Input,
-    Link,
     Stack,
     Image
 } from '@chakra-ui/react'
 import React, { useRef, useContext } from 'react'
 import { AuthContext } from '../../store/auth-context/auth-context'
-import API_URL from '../../assets/config-api/api-url'
 import { useHistory } from 'react-router-dom'
 
-export default function SignUp () {
+export default function SignUp() {
     const currentUrl = useHistory()
     const authCtx = useContext(AuthContext)
     const emailInputRef = useRef()
@@ -30,7 +28,7 @@ export default function SignUp () {
     }
 
     return (
-        <Stack minH={'100vh'} direction={{base: 'column', md: 'row'}}>
+        <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
             <Flex p={8} flex={1} align={'center'} justify={'center'}>
                 <Stack spacing={4} w={'full'} maxW={'md'}>
                     <Heading fontSize={'2xl'}>Create Your Account Now!</Heading>
@@ -47,13 +45,13 @@ export default function SignUp () {
                             <FormLabel>Password</FormLabel>
                             <Input type="password" ref={passwordInputRef}/>
                         </FormControl>
-                        <Stack spacing={6}>
+                        <Stack spacing={4}>
                             <Stack
-                                direction={{base: 'column', sm: 'row'}}
+                                direction={{ base: 'column', sm: 'row' }}
                                 align={'start'}
                                 justify={'space-between'}>
-                                <Checkbox>Remember me</Checkbox>
-                                <Link color={'blue.500'}>Forgot password?</Link>
+                                <Checkbox>I confirm that I have entered more than seven digits.</Checkbox>
+                                {/*<Link color={'blue.500'}>Forgot password?</Link>*/}
                             </Stack>
                             <Button colorScheme={'blue'} variant={'solid'} type="submit">
                                 Sign up

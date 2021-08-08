@@ -1,12 +1,16 @@
 import Sidebar from './SideBar'
-import React from 'react'
+import React, {useContext, useEffect} from 'react'
 import { Route } from 'react-router-dom'
-import TeamCard from './Team/TeamCard'
 import ConferenceDisplayModule from './Conference/ConferenceDisplayModule'
-import DUMMY_DATA from '../../assets/dummy-data/DUMMY_DATA'
-
-
+import TeamDisplayModule from './Team/TeamDisplayModule'
+import ApiDisplayTestModule from './Team/ApiDisplayTestModule.js'
+import { SessionContext } from '../../store/session-context/session-context'
 const UserMainPage = () => {
+
+    const sessionCtx = useContext(SessionContext)
+    useEffect(() => {
+        sessionCtx.getAllSessions()
+    }, [])
 
     return (
         <>
@@ -19,7 +23,13 @@ const UserMainPage = () => {
                     <ConferenceDisplayModule/>
                 </Route>
                 <Route path={`/user-profile-${localStorage.email}/team`}>
-                    <TeamCard dummyUsers={DUMMY_DATA.dummyUsersWBM1}/>
+                     
+
+                <TeamDisplayModule></TeamDisplayModule>
+
+                {/* <ApiDisplayTestModule></ApiDisplayTestModule> */}
+                    
+                     
                 </Route>
             </Sidebar>
 

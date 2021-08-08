@@ -17,6 +17,7 @@ export const LoginForm = (props) => {
         const emailInput = emailInputRef.current.value
         const passwordInput = passwordInputRef.current.value
         authCtx.login(emailInput, passwordInput, currentUrl)
+        console.log("authCtx.email is " + authCtx.email)
     }
 
     return (

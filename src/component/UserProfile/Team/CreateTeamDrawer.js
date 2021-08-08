@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import {
     Checkbox,
     Drawer,
@@ -15,53 +15,59 @@ import {
     Stack,
     Box,
     FormLabel,
+    Textarea,
     useColorModeValue
 } from '@chakra-ui/react'
-import DUMMY_DATA from '../../../assets/dummy-data/DUMMY_DATA'
 import { AddIcon } from '@chakra-ui/icons'
-import { TeamContext } from '../../../store/team-context/team-context.'
+import { TeamContext } from '../../../store/team-context/team-context'
 import { AuthContext } from '../../../store/auth-context/auth-context'
 
-
-function CreateTeamDrawer (props) {
-
+function CreateTeamDrawer() {
 
     const teamCtx = useContext(TeamContext)
     const authCtx = useContext(AuthContext)
 
     useEffect(() => {
-            console.log(authCtx.getAllUsers())
-        }, [])
+        console.log('test : try to get all user')
+        authCtx.getAllUsers()
+        console.log(authCtx.usersInfo)
+    }, [])
 
-
-    const {isOpen, onOpen, onClose} = useDisclosure()
+    const { isOpen, onOpen, onClose } = useDisclosure()
     const teamNameInputRef = React.useRef()
+    const teamDescriptionRef = React.useRef()
 
+    let idSelectedUsers = []
 
-    let selectedUsers = []
+    const submitHandler = () => {
 
-    const submitHandler = (event) => {
-        console.log(teamNameInputRef.current.value)
-        console.log(selectedUsers)
+        const idOwner = localStorage.idUser
+        const idMembers = idSelectedUsers
+        const teamName = teamNameInputRef.current.value
+        const description = teamDescriptionRef.current.value
 
-        selectedUsers = []
-        onClose()
+        console.log(idOwner, idMembers, teamName, description)
+        teamCtx.createTeam(idOwner, [...idMembers], teamName, description)
+
     }
 
-    const selectedUserHandler = (event) => {
-        if ( event.target.checked ) {
-            selectedUsers.push(event.target.value)
+    const selectedUserHandler = (idUser) => {
+        console.log('select handler called')
+        const index = idSelectedUsers.indexOf(idUser)
+        if( index < 0 ) {
+            idSelectedUsers.push(idUser)
+
         } else {
-            const index = selectedUsers.indexOf(event.target.value)
-            selectedUsers.splice(index, 1)
+            idSelectedUsers.splice(index, 1)
         }
+
+        console.log(idSelectedUsers)
     }
 
     const cancelHandler = () => {
-        selectedUsers = []
+        idSelectedUsers = []
         onClose()
     }
-
 
     return (
         <>
@@ -87,6 +93,7 @@ function CreateTeamDrawer (props) {
                 New Team
             </Button>
 
+
             <Drawer
                 isOpen={isOpen}
                 placement="right"
@@ -111,8 +118,8 @@ function CreateTeamDrawer (props) {
                                     ref={teamNameInputRef}
                                     id="teamname"
                                     placeholder="Please enter your team name"
-
-                                ></Input>
+                                    maxLength={16}
+                                />
                             </Box>
 
                             <Box>
@@ -121,15 +128,23 @@ function CreateTeamDrawer (props) {
                                 </FormLabel>
 
                                 <SimpleGrid column={2} spacing={2}>
-                                    {DUMMY_DATA.dummyUsersWBM2.map((person) => (
+                                    {authCtx.usersInfo.map((person) => (
                                         <Checkbox
-                                            value={person.name}
-                                            onChange={selectedUserHandler}
+                                            key={person.idUser}
+                                            value={person.userName}
+                                            onChange={() => selectedUserHandler(person.idUser)}
                                         >
-                                            {person.name}
+                                            {person.userName}
                                         </Checkbox>
                                     ))}
                                 </SimpleGrid>
+                            </Box>
+                            <Box>
+                                <FormLabel htmlFor="team description">Description</FormLabel>
+                                <Textarea
+                                    ref={teamDescriptionRef}
+                                    required={true}
+                                    placeholder="Please write some info for your team"/>
                             </Box>
                         </Stack>
                     </DrawerBody>
@@ -149,5 +164,4 @@ function CreateTeamDrawer (props) {
     )
 }
 
-export default CreateTeamDrawer 
-
+export default CreateTeamDrawer

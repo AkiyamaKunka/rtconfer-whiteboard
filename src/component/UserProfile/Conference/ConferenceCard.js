@@ -16,7 +16,12 @@ export default function ConferenceCard (props) {
     const sessionCtx = useContext(SessionContext)
     const currentUrl = useHistory()
     const recoverSessionHandler = () => {
-        currentUrl.push(props.session.sessionUrl)
+        sessionCtx.sessionUrl = props.session.sessionUrl
+        localStorage.setItem('idSession', props.session.idSession)
+        console.log('props url is ' + props.session.sessionUrl)
+        console.log('sessionCtx url is ' + sessionCtx.sessionUrl)
+        localStorage.setItem('sessionUrl', props.session.sessionUrl)
+        currentUrl.push(sessionCtx.sessionUrl)
     }
     return (
         <Box py={6} style={{display: 'inline-block', margin: '10px'}}>
@@ -48,13 +53,13 @@ export default function ConferenceCard (props) {
 
                     <Stack direction={'row'} justify={'center'} spacing={6}>
                         <Stack spacing={0} align={'center'}>
-                            <Text fontWeight={600}>Name</Text>
+                            <Text fontWeight={600}>{props.session.ownerName}</Text>
                             <Text fontSize={'sm'} color={'gray.500'}>
                                 Owner
                             </Text>
                         </Stack>
                         <Stack spacing={0} align={'center'}>
-                            <Text fontWeight={600}>Time</Text>
+                            <Text fontWeight={600}>{props.session.createdAt && props.session.createdAt.substr(5,5) }</Text> // pretty tricky here...
                             <Text fontSize={'sm'} color={'gray.500'}>
                                 Date
                             </Text>
