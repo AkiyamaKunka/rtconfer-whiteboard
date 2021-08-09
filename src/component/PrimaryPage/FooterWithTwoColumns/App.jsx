@@ -11,14 +11,17 @@ export const ChakraFooter = () => (
         as="footer"
         role="contentinfo"
         mx="auto"
-        maxW="7xl"
         py="12"
         px={{
             base: '4',
             md: '8'
         }}
+        background="ghostwhite"
     >
-        <Stack spacing="10" divider={<StackDivider/>}>
+        <Stack spacing="10"
+               paddingLeft="7%"
+               paddingRight="7%"
+               divider={<StackDivider/>}>
             <Stack
                 direction={{
                     base: 'column',

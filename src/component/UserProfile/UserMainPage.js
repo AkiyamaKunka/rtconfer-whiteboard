@@ -5,34 +5,30 @@ import ConferenceDisplayModule from './Conference/ConferenceDisplayModule'
 import TeamDisplayModule from './Team/TeamDisplayModule'
 import ApiDisplayTestModule from './Team/ApiDisplayTestModule.js'
 import { SessionContext } from '../../store/session-context/session-context'
+import { Skeleton, SkeletonCircle, SkeletonText, Box, Heading } from "@chakra-ui/react"
+
+
 const UserMainPage = () => {
 
-    const sessionCtx = useContext(SessionContext)
-    useEffect(() => {
-        sessionCtx.getAllSessions()
-    }, [])
+
 
     return (
         <>
 
             <Sidebar style={{display: 'inline'}}>
                 <Route path={`/user-profile-${localStorage.email}`} exact>
-                    <h1>Welcome to your user profile!</h1>
+                    <Heading size="lg" fontSize="50px" >
+                        "Welcome." -- Akiyama
+                    </Heading>
                 </Route>
                 <Route path={`/user-profile-${localStorage.email}/conference`}>
                     <ConferenceDisplayModule/>
                 </Route>
                 <Route path={`/user-profile-${localStorage.email}/team`}>
-                     
-
-                <TeamDisplayModule></TeamDisplayModule>
-
+                <TeamDisplayModule/>
                 {/* <ApiDisplayTestModule></ApiDisplayTestModule> */}
-                    
-                     
                 </Route>
             </Sidebar>
-
         </>
     )
 }

@@ -25,9 +25,9 @@ function App () {
                 <TeamContextProvider>
                     <SessionContextProvider>
                         <AuthContextProvider>
-                            <Route path="*" exact>
-                                <Redirect to="/welcome"/>
-                            </Route>
+                            {/*<Route path="*" exact>*/}
+                            {/*    <Redirect to="/welcome"/>*/}
+                            {/*</Route>*/}
                             <Route path="/welcome" exact>
                                 <PrimaryPage/>
                                 <ChakraProvider>
@@ -52,6 +52,7 @@ function App () {
                                     <AboutUs/>
                                 </ChakraProvider>
                             </Route>
+
                             <Route path={`/user-profile-${localStorage.email}`}>
                                 <ChakraProvider>
                                     <UserMainPage/>
@@ -59,7 +60,8 @@ function App () {
                             </Route>
 
                             {/*<Route path={sessionCtx.sessionUrl} exact>*/}
-                            <Route path="/session/:sessionUrl" exact>
+                            <Route path={`${localStorage.getItem('sessionUrl')}`}>
+                            {/*<Route path="/session/:sessionUrl" exact>*/}
                                 <ChakraProvider>
                                     <SessionMainPage/>
                                 </ChakraProvider>

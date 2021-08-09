@@ -102,7 +102,7 @@ const AuthContextProvider = (props) => {
         }).then((data) => {
             loginStatusSetHandler(data.token, enteredEmail, data.user.userName, data.user.idUser, currentUrl)
             successLogToast({
-                title: 'Login successfully.',
+                title: 'Account logined',
                 description: 'You have logged in successfully.',
                 status: 'success',
                 duration: 4000,
@@ -110,7 +110,7 @@ const AuthContextProvider = (props) => {
             })
         }).catch((error) => {
             errorLogToast({
-                title: 'Login failed.',
+                title: 'An error occurred.',
                 description: 'Please check whether the email address matches the password.',
                 status: 'error',
                 duration: 4000,
@@ -161,7 +161,7 @@ const AuthContextProvider = (props) => {
         }).catch((error) => {
             errorRegisterToast({
                 title: 'An error occurred.',
-                description: 'Please check whether the password is greater than or equal to eight characters. If yes, your mailbox may have been registered. Please change your mailbox',
+                description: 'Your mailbox may have been registered.Please change the mailbox.',
                 status: 'error',
                 duration: 4000,
                 isClosable: true
