@@ -53,3 +53,17 @@ b
 src/index.js,f/9/f900edc44cb929c2267a16100a32851f6d5b477d
 <
 package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
+n
+>src/component/LogInPage/LoginWithCentredForm/PasswordField.jsx,4/d/4d301d02a2be3554b7e884ae43329a2656dd5719
+f
+6src/component/PrimaryPage/FooterWithTwoColumns/App.jsx,1/0/106515bf55f7acae683296b101f94ea8733d7719
+k
+;src/component/PrimaryPage/FooterWithTwoColumns/LinkGrid.jsx,d/c/dc647a72e43f276663b52b1e51c6dc1a9f90a430
+X
+(src/component/PrimaryPage/PrimaryPage.js,d/d/dd490333885a1a2590d90bd379cccaf1cac12163
+V
+&src/store/auth-context/auth-context.js,e/2/e21890dfb87b971d31207d18dcb1a67514d7f4e7
+A
+package-lock.json,f/a/fa288d1472d29beccb489a676f68739ad365fc47
+n
+>src/component/UserProfile/Conference/CreateConferenceDrawer.js,7/5/752f790e973471b6e089c9da8fcb79b0b474daf8
