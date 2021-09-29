@@ -1,13 +1,13 @@
 # RTConfer : Online Rich-Media Collaborative Whiteboard Platform
 Bring Teams Together, anywhere.
 
-## Guide Book
+## 1. Guide Book
 [Click here for Developers' Guidebook!](https://www.yuque.com/pgn341/keph57/zig2f6) 
 
-## Demo Video
+## 2. Demo Video
  [Click Here for video on Youtube!](https://youtu.be/U80gxszblNo) 
 
-## Feature Hightlight
+## 3. Feature Hightlight
 
 * Online video streaming in Group
 * Real-time rich-media whiltboard collaboration
@@ -15,7 +15,7 @@ Bring Teams Together, anywhere.
 * File uploading & displaying
 * Robust user and team organization
 
-## Tech Outline
+## 4. Tech Outline
 
 * Designed website with robust session security and multi-person video & audio call stability with Socket.IO based on WebSocket
 * Applied MERN: MongoDB, Express.js RESTful API, React.js, Node.js, JWT authentication, Chakra UI with Heroku in development
@@ -25,7 +25,7 @@ Bring Teams Together, anywhere.
 
 
 
-
+# RTConfer : Deploy Locally
 
 ## 1. If you are a client who want to deploy our service or test:
 
