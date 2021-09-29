@@ -1,0 +1,382 @@
+/*-------------------------------------*/
+/*------------BASIC SETUP--------------*/
+/*-------------------------------------*/
+
+/*
+Orange Color: #e67e22
+Dimmed Orange Color: #cf6d17
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #fff;
+    color: #5e5d5d;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+}
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.68)), url("../../assets/img/bg1.jpeg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/*-------------------------------------*/
+/*----------REUSABLE COMPONENTS--------*/
+/*-------------------------------------*/
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.move-left {
+    margin: auto 50px auto 10px;
+}
+
+
+/*---------------BUTTONS---------------*/
+
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    /*background-color: #38a8dd;*/
+    /*then this would be a block element?*/
+    padding: 10px 30px;
+    color: #fff;
+    font-weight: 300;
+    text-decoration: none;
+    /*remove the uderline*/
+    border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+    /*this can make the color change pretty slow*/
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #2980b9 !important;
+}
+
+
+.btn-full:link,
+.btn-full:visited {
+    background-color: #3498db;
+    border: 1px solid #3498db;
+    margin: 0 4px 0 0;
+}
+
+.btn-full:hover,
+.btn-full:active {
+    border: 1px solid #2980b9;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    color: #3498db;
+    border: 1px solid #3498db;
+    padding: 10px 23px;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    color: #fff;
+    border: 1px solid #2980b9;
+}
+
+/*--------------HEADINGS----------------*/
+
+
+.hero-text-box {
+    /*background-color: #38a8dd;*/
+    position: absolute;
+    width: 1140px;
+    top: 425px;
+    left: 48.5%;
+
+    transform: translate(-50%, -50%);
+}
+
+.hero-text-box h1 {
+    color: #fff;
+    font-size: 240%;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+}
+
+.hero-text-box button {
+    display: inline-block;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 23px;
+}
+.hero-text-box button:hover {
+    background-color: #2980b9;
+    border: 1px solid #2980b9;
+    margin: 0 4px 0 0;
+    color: white;
+}
+
+/*--------------NAVIGATION-------------*/
+
+.logo {
+    height: 400px;
+    width: auto;
+    float: left;
+    margin-top: -130px;
+    margin-left: -70px
+}
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    /*you should set the border bottom as "transparent", if not, it will looks a white line*/
+    transition: border-bottom 0.2s;
+    padding: 0 0 8px 0;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #3498db;
+}
+
+
+/*---------------SLOGAN----------------*/
+
+section {
+    padding: 60px 0;
+}
+
+.section-features {
+    color: #282727;
+    background-color: #fff;
+}
+
+.sub-slogan {
+    float: left;
+    width: 25%;
+}
+
+
+/*--------------PARAGRAPH-------------*/
+
+
+.long-copy {
+    line-height: 150%;
+    width: 70%;
+    margin: 40px auto 60px auto;
+}
+
+.sub-long-copy {
+    line-height: 150%;
+    width: 100%;
+    font-size: 90%;
+
+}
+
+.box {
+    padding: 1%;
+}
+
+.section-features h2 {
+    color: #282727;
+    font-size: 150%;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-features h2:after {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #3498db;
+    display: block;
+    height: 2px;
+    width: 100px;
+    content: "";
+}
+
+.section-features h3 {
+    color: #282727;
+    font-size: 115%;
+    font-weight: 500;
+    text-transform: uppercase;
+    /*letter-spacing: 1px;*/
+    word-spacing: 1px;
+    padding: 7px 0;
+    margin-bottom: 5px;
+}
+
+/*---------------ICONS--------------*/
+
+ion-icon {
+    font-size: 350%;
+    color: #3498db;
+    padding: 0 0 5px 0;
+    display: block;
+}
+
+/*------------MEAL-SHOWCASE---------*/
+
+.meal-showcase {
+
+    width: 100%;
+    padding-top: 0;
+}
+
+.meal-showcase ul {
+
+    display: block;
+    list-style: none;
+}
+
+.meal-showcase li {
+    display: block;
+    width: 25%;
+    height: 277px;
+    float: left;
+    overflow: hidden;
+    background-color: #000;
+    /*which can prevent sub element from overflowing the window*/
+}
+
+.meal-showcase img {
+    opacity: 0.7;
+    width: 100%;
+    margin: 0;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.meal-showcase img:hover,
+.meal-showcase img:active {
+    opacity: 1;
+    transform: scale(1.15);
+}
+
+/*------------WORK-SECTION----------*/
+
+
+.section-steps h2 {
+    color: #282727;
+    font-size: 150%;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-steps h2:after {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #3498db;
+    display: block;
+    height: 2px;
+    width: 100px;
+    content: "";
+}
+
+
+.step-box-1 {
+    float: left;
+    display: block;
+    text-align: right;
+    /*does not only applied to text, but all elements?*/
+    padding-right: 3%;
+    margin-top: 30px;
+    width: 50%;
+}
+
+.step-box-2 {
+    float: left;
+    display: block;
+    width: 50%;
+    padding-left: 3%;
+    margin-top: 70px;
+    padding-top: 70px;
+}
+
+.app-screen {
+    display: block;
+    margin: 0 30px 0 auto;
+    width: 60%;
+    border-radius: 15%;
+    overflow: hidden;
+}
+
+.work-step div {
+    color: #3498db;
+    border: 2px solid #3498db;
+    display: inline-block;
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    font-size: 150%;
+    padding: 5px;
+    float: left;
+    margin-right: 10px;
+}
+
+.work-step {
+    padding: 0 0 65px 0;
+}
+
+.work-step:last-of-type {
+    padding: 0 0 30px 0;
+}
+
+.btn-app img {
+    display: inline;
+    height: 50px;
+    width: auto;
+    margin-right: 30px;
+    /*test git push */
+}
+
+.work-step-outer {
+    display: inline;
+}
+

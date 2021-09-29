@@ -1,0 +1,58 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@chakra-ui/icons": "^1.0.14",
+    "@chakra-ui/react": "^1.6.5",
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
+    "@fontsource/open-sans": "^4.5.0",
+    "@fontsource/raleway": "^4.5.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "agora-rtc-sdk-ng": "^4.6.2",
+    "ali-oss": "^6.16.0",
+    "formik": "^2.2.9",
+    "framer-motion": "^4.1.17",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-icons": "^4.2.0",
+    "react-ionicons": "^4.2.0",
+    "react-lorem-ipsum": "^1.4.9",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.1",
+    "react-test-renderer": "^17.0.2",
+    "styled-components": "^5.3.0",
+    "web-vitals": "^0.2.4",
+    "white-web-sdk": "^2.13.14"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "node --max_old_space_size=12000 node_modules/.bin/react-scripts build --progress --env.prod",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.14.5"
+  }
+}

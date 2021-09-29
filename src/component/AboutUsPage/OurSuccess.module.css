@@ -1,0 +1,62 @@
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.box {
+    padding: 1.5%;
+}
+
+.section-steps {
+    background-color: #404040;
+}
+
+.section-steps h2 {
+    color: ghostwhite;
+    font-size: 200%;
+    font-weight: 550;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    margin-left: 0;
+    margin-bottom: 20px;
+}
+
+.section-steps h2:after {
+    margin-top: 30px;
+    background-color: #3498db;
+    display: block;
+    height: 2px;
+    width: 300px;
+    content: "";
+}
+
+.section-steps h3 {
+    color: ghostwhite;
+    font-size: 130%;
+    font-weight: 520;
+}
+
+.step-box-1 {
+    float: left;
+    display: block;
+    text-align: left;
+    /*does not only applied to text, but all elements?*/
+    margin-top: 30px;
+    width: 50%;
+}
+
+.step-box-2 {
+    float: left;
+    width: 40%;
+    margin-top: 30px;
+    margin-left: 5%;
+}
+
+

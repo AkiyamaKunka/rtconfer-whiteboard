@@ -1,0 +1,40 @@
+{
+  "name": "richmedia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "env-cmd -f ./config/dev.env nodemon src/index.js",
+    "test": "env-cmd -f ./config/test.env jest --runInBand",
+    "gen-video-token": "node src/sdk-modules/video-token/generate-token.js"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "crc-32": "^1.2.0",
+    "cuint": "^0.2.2",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "lodash.isequal": "^4.5.0",
+    "mongodb": "^4.0.1",
+    "mongoose": "^5.13.3",
+    "multer": "^1.4.2",
+    "node-fetch": "^2.6.1",
+    "uuid": "^8.3.2",
+    "validator": "^13.6.0"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0",
+    "eslint": "^7.31.0",
+    "jest": "^27.0.6",
+    "nodemon": "^2.0.12",
+    "supertest": "^6.1.4"
+  }
+}

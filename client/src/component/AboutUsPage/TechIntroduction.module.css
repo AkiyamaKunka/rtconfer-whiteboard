@@ -1,0 +1,83 @@
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.box {
+    padding: 1.5%;
+}
+
+.section-steps {
+    background-color: #282c34;
+}
+
+
+.section-steps h2 {
+    color: ghostwhite;
+    font-size: 120%;
+    font-weight: 360;
+
+}
+
+.section-steps h3 {
+    color: white;
+    font-size: 200%;
+    font-weight: 550;
+    text-transform: none;
+    /*letter-spacing: 1px;*/
+    word-spacing: 1px;
+    margin-top: 30px;
+}
+
+.section-steps h3:after {
+    margin-top: 30px;
+    background-color: #3498db;
+    display: block;
+    height: 3px;
+    width: 250px;
+    content: "";
+}
+
+.step-box-1 {
+    float: left;
+    display: block;
+    text-align: left;
+    /*does not only applied to text, but all elements?*/
+    margin-top: 30px;
+    width: 40%;
+    margin-left: 8%;
+}
+
+.step-box-2 {
+    float: left;
+    width: 40%;
+    margin-top: 30px;
+    margin-left: 4%;
+    margin-right: 8%;
+
+}
+
+
+.step-box {
+    width: 100%;
+    margin-left: 8%;
+}
+
+.imgmid img {
+    margin-top: 10%;
+    width: 16%;
+    margin-left: 40%;
+}
+
+.imglong img {
+    margin-top: 10%;
+    width: 50%;
+    margin-left: 25%;
+}

@@ -1,0 +1,64 @@
+
+.section-features {
+    color: ghostwhite;
+    font-weight: bolder;
+    background-image: url('https://evp4mrv2nwt.exactdn.com/wp-content/uploads/2020/01/bg1.png?strip=all&lossy=1&ssl=1%22');
+}
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.left-copy {
+    line-height: 150%;
+    width: 85%;
+    margin: 40px 0 60px;
+    font-weight: 400;
+    font-size: 24px;
+    font-family: Damascus, serif;
+}
+
+.section-features h2 {
+    color: #3182c5;
+    font-size: 250%;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    margin-left: 0;
+    margin-top: 60px;
+}
+
+.section-features h1 {
+    color: white;
+    font-size: 27px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
+.section-features h2:after {
+    margin-top: 30px;
+    margin-left: 0;
+    background-color: #3182ce;
+    display: block;
+    height: 2px;
+    width: 240px;
+    content: "";
+}
+
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    /*background-color: #38a8dd;*/
+    /*then this would be a block element?*/
+    padding: 10px 30px;
+    color: #fff;
+    font-weight: 300;
+    text-decoration: none;
+    /*remove the uderline*/
+    border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+    /*this can make the color change pretty slow*/
+}
