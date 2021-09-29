@@ -2,10 +2,10 @@
 Bring Teams Together, anywhere.
 
 ## Guide Book
-[Click here](https://www.yuque.com/pgn341/keph57/zig2f6) for complete Guidebook for Developers
+[Click here for Developers' Guidebook!](https://www.yuque.com/pgn341/keph57/zig2f6) 
 
 ## Demo Video
- [Click Here](https://youtu.be/U80gxszblNo) for video on Youtube!
+ [Click Here for video on Youtube!](https://youtu.be/U80gxszblNo) 
 
 ## Feature Hightlight
 
