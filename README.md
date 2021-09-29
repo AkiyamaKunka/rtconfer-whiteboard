@@ -1,6 +1,7 @@
 ## RTConfer : Online Rich-Media Collaborative Platform
 Bring Teams Together, anywhere.
 
+Copyright @ Jisuanke Inc. & Group LucyRiver's Ice Tea @ School of Software, Nankai University
 
 
 ### 1. If you are a client who want to deploy our service or test:
