@@ -1,6 +1,9 @@
 # RTConfer : Online Rich-Media Collaborative Whiteboard Platform
 Bring Teams Together, anywhere.
 
+## Demo Video
+ [Click Here for video on Youtube!](https://youtu.be/U80gxszblNo) 
+
 ## Feature Hightlight
 
 * Online video streaming in Group
@@ -17,8 +20,7 @@ Bring Teams Together, anywhere.
 * Integrated Google Real-time Firebase handling input conflicts, realizing message playback to client-side of code/text editing
 
 
-## Demo Video
- [Click Here for video on Youtube!](https://youtu.be/U80gxszblNo) 
+
 
 
 
