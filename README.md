@@ -1,5 +1,15 @@
-# RTConfer : Online Rich-Media Collaborative Platform
+# RTConfer : Online Rich-Media Collaborative Whiteboard Platform
 Bring Teams Together, anywhere.
+
+## Feature Hightlight
+
+* Online video streaming in Group
+* Real-time rich-media whiltboard collaboration
+* Real-time code and rich-text editing
+* File uploading & displaying
+* Robust user and team organization
+
+## Tech Outline
 
 * Designed website with robust session security and multi-person video & audio call stability with Socket.IO based on WebSocket
 * Applied MERN: MongoDB, Express.js RESTful API, React.js, Node.js, JWT authentication, Chakra UI with Heroku in development
@@ -8,12 +18,8 @@ Bring Teams Together, anywhere.
 
 
 ## Demo Video
-Check [Here](https://youtu.be/U80gxszblNo) on Youtube!
+ [Click Here for video on Youtube!](https://youtu.be/U80gxszblNo) 
 
-
-
-
-### Copyright @ Jisuanke Inc. & Group LucyRiver's Ice Tea @ School of Software, Nankai University
 
 
 ## 1. If you are a client who want to deploy our service or test:
@@ -94,6 +100,9 @@ docker ps
 
 
 ![MERN DOCKER diagram](https://github.com/sujaykundu777/mern-docker/blob/master/3-tier-diagram.png?raw=true)
+
+
+### Copyright @ Jisuanke Inc. & Group LucyRiver's Ice Tea @ School of Software, Nankai University
 
 
 
