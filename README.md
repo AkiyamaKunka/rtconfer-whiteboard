@@ -104,7 +104,7 @@ docker ps
 ![MERN DOCKER diagram](https://github.com/sujaykundu777/mern-docker/blob/master/3-tier-diagram.png?raw=true)
 
 
-### Copyright @ Jisuanke Inc. & Group LucyRiver's Ice Tea @ School of Software, Nankai University
+#### Copyright @ Jisuanke Inc. & Group LucyRiver's Ice Tea @ School of Software, Nankai University
 
 
 
