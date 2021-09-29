@@ -1,10 +1,22 @@
-## RTConfer : Online Rich-Media Collaborative Platform
+# RTConfer : Online Rich-Media Collaborative Platform
 Bring Teams Together, anywhere.
 
-Copyright @ Jisuanke Inc. & Group LucyRiver's Ice Tea @ School of Software, Nankai University
+* Designed website with robust session security and multi-person video & audio call stability with Socket.IO based on WebSocket
+* Applied MERN: MongoDB, Express.js RESTful API, React.js, Node.js, JWT authentication, Chakra UI with Heroku in development
+* Implemented real-time collaborative code and rich-text editing with Firepad, file uploading with AliCloud Open Storage Service
+* Integrated Google Real-time Firebase handling input conflicts, realizing message playback to client-side of code/text editing
 
 
-### 1. If you are a client who want to deploy our service or test:
+## Demo Video
+Check [Here](https://youtu.be/U80gxszblNo) on Youtube!
+
+
+
+
+### Copyright @ Jisuanke Inc. & Group LucyRiver's Ice Tea @ School of Software, Nankai University
+
+
+## 1. If you are a client who want to deploy our service or test:
 
 Please follow the steps to deploy our web service as quickly as possible!
 
@@ -24,7 +36,7 @@ Please follow the steps to deploy our web service as quickly as possible!
 
 
 
-### 2.If you are a engineer who wanna further development:
+## 2.If you are a engineer who wanna further development:
 
 ### Prerequisites:
 
