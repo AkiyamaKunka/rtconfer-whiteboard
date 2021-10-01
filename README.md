@@ -2,7 +2,7 @@
 Bring Teams Together, anywhere.
 
 ## 1. Guide Book
-[Click here for Developers' Guidebook!](https://www.yuque.com/pgn341/keph57/zig2f6) 
+[Click here for Developers' Guidebook!](https://www.yuque.com/docs/share/894368bd-aea0-4871-8ee1-92ecfa3ff202?#) 
 
 ## 2. Demo Video
  [Click Here for video on Youtube!](https://youtu.be/U80gxszblNo) 
