@@ -31,6 +31,10 @@ function App() {
                             {/*<Route path="*" exact>*/}
                             {/*    <Redirect to="/welcome"/>*/}
                             {/*</Route>*/}
+
+                            <Route exact path="/" render={() => (
+                                <Redirect to="/welcome"/>
+                            )}/>
                             <Route path="/welcome" exact>
                                 <PrimaryPage/>
                                 <ChakraProvider>
