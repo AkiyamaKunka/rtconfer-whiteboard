@@ -1,6 +1,6 @@
 const LOCAL_ROOT_URL = 'http://127.0.0.1:8080/'
 const CLOUD_ROOT_URL = 'https://lucyriver-richmedia-server.herokuapp.com/'
-const ROOT_URL = CLOUD_ROOT_URL
+const ROOT_URL = LOCAL_ROOT_URL
 const API_URL = {
     signUpUrl: ROOT_URL + 'user/sign-up',
     loginUrl: ROOT_URL + 'user/login',
