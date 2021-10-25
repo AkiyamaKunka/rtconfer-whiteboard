@@ -1,4 +1,4 @@
-const LOCAL_ROOT_URL = 'http://127.0.0.1:8080/'
+const LOCAL_ROOT_URL = 'http://localhost:8080/'
 const CLOUD_ROOT_URL = 'https://lucyriver-richmedia-server.herokuapp.com/'
 const ROOT_URL = LOCAL_ROOT_URL
 const API_URL = {
