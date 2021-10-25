@@ -1,5 +1,6 @@
 # RTConfer : Online Rich-Media Collaborative Whiteboard Platform
 Bring Teams Together, anywhere.
+![Main Page](https://ibb.co/VY2gq5V)
 
 ## 1. Guide Book
 [Click here for Developers' Guidebook!](https://www.yuque.com/docs/share/894368bd-aea0-4871-8ee1-92ecfa3ff202?#) 
