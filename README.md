@@ -18,9 +18,9 @@
  
 </div>
  
-RTConfer is a Online Rich-Media Collaborative Whiteboard Platform.
+**RTConfer** is an Online Rich-Media Collaborative Whiteboard Platform.
 
-Bring Teams Together, anywhere.
+** Bring Teams Together, anywhere. **
 
 ![Main Page](https://i.ibb.co/MkMcCQn/main-page.png)
 
