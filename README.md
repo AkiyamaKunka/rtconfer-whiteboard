@@ -41,7 +41,7 @@
 ## 🚀 Paltform Display
 
 <p align="center">
-  I'm pleased to show you the demo website here: ⚡www.rtconfer.com⚡ to experience all the feature by your own!
+  I'm pleased to show you the demo website here: ⚡ www.rtconfer.com ⚡ to try all the feature by your own!
 </p>
 
 <p align="center">
