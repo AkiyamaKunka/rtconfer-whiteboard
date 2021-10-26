@@ -22,6 +22,8 @@ Bring Teams Together, anywhere.
 * File uploading & displaying
 * Robust user and team organization
 
+[![image](https://www.linkpicture.com/q/meeting-room.png)](https://www.linkpicture.com/view.php?img=LPic617769959bff31447176570)
+
 ## 4. Tech Outline
 
 * Designed website with robust session security and multi-person video & audio call stability with Socket.IO based on WebSocket
