@@ -7,7 +7,6 @@
  ![](https://img.shields.io/badge/Chakra-1.6.5-brightgreen?style=for-the-badge&logo=chakra-ui)
  ![](https://img.shields.io/badge/Node-12.16.1-9cf?style=for-the-badge&logo=node.js)
 
-
 </div>
 
 <div align=center>
@@ -28,11 +27,11 @@
 
 ## ⚙️ Feature Hightlight
 
-* 💻 Live Streaming: Engaging experience for group real-time online video streaming within whiteboard.
-* 📈 Canvas: Real-time collaborative web painting canvas enables you to keep everyone in the loop.
-* 📑 Code & Rich-Text Editor: Share insparing code and text with teammater within Canvas, in real-time.
-* 📑 Code & Rich-Text Editor: Share insparing code and text with teammater within Canvas, in real-time.
-* 👥 TEAM & SESSIONS: Easily create teams and manage them. View your historical meetings and resume at any time.
+* 👥 Team & Sessions: Easily create teams and manage them. View historical meetings and resume at any time.
+* ✏️ Canvas: Real-time collaborative web painting canvas enables you to keep everyone in the loop.
+* 💻 Live Streaming: Engaging experience for group real-time online video streaming in session.
+* 📑 Code & Rich-Text Editor: Share insparing code and text with teammater within canvas, in real-time.
+* 📎 File Display: Upload and share your file on canvas and make notes supported by canvas painting. 
 
 [![image](https://www.linkpicture.com/q/meeting-room.png)](https://www.linkpicture.com/view.php?img=LPic617769959bff31447176570)
 
