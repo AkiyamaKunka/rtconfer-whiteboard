@@ -1,4 +1,4 @@
-# RTConfer · ![](https://img.shields.io/badge/license-MIT-blue)
+# RTConfer · ![](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge&logo=appveyor)
 
 RTConfer is a Online Rich-Media Collaborative Whiteboard Platform.
 
