@@ -43,7 +43,7 @@
   <img alt="Light" src="https://www.linkpicture.com/q/meeting-room.png" width="93%">
 </p>
  <p align="center">
-    ** Canvas (Displaying Code Editor) **
+    Canvas (Displaying Code Editor)
 </p>
 <p align="center">
   <img alt="Dark" src="https://www.linkpicture.com/q/session-creation.png" width="93%">
