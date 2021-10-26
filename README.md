@@ -27,7 +27,7 @@
 
 ## ⚙️ Feature Hightlight
 
-* 👥 Team & Sessions: Easily create teams and manage them. View historical meetings and resume at any time.
+* 👥 Teams & Meetings: Create teams and manage them. View historical meetings and resume at any time.
 * ✏️ Canvas: Real-time collaborative web painting canvas enables you to keep everyone in the loop.
 * 💻 Live Streaming: Engaging experience for group real-time online video streaming in session.
 * 📑 Code & Rich-Text Editor: Share insparing code and text with teammater within canvas, in real-time.
