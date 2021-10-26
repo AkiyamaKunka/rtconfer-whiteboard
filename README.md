@@ -1,7 +1,15 @@
 [![image](https://www.linkpicture.com/q/LOGO6.png)](https://www.linkpicture.com/view.php?img=LPic617768bc317c51963078982)
 
- ![](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge&logo=appveyor)
+ ![](https://img.shields.io/badge/License-Apache-blue?style=for-the-badge&logo=appveyor)
+ 
+ ![](https://img.shields.io/badge/React-17.0.1-brightgreen?style=for-the-badge&logo=appveyor)
+ 
+ ![](https://img.shields.io/badge/Chakra%20UI-1.6.5-ff69b4?style=for-the-badge&logo=appveyor)
+ 
+ ![](https://img.shields.io/badge/MongoDB-4.0.1-orange?style=for-the-badge&logo=appveyor)
+ 
 
+ 
 RTConfer is a Online Rich-Media Collaborative Whiteboard Platform.
 
 Bring Teams Together, anywhere.
