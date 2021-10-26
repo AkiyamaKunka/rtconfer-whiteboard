@@ -175,6 +175,6 @@ my home college @Nankai University.
 
 ### Contributors:
 
-AkiyamaKunka, JamesYang, WenBiming
+AkiyamaKunka, JamesYang, WenBiming，SweetieLee
 
 
