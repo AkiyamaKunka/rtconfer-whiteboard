@@ -5,6 +5,7 @@
  ![](https://img.shields.io/badge/License-Apache-blue?style=for-the-badge&logo=apache)
  ![](https://img.shields.io/badge/React-17.0.1-brightgreen?style=for-the-badge&logo=react)
  ![](https://img.shields.io/badge/Chakra-1.6.5-brightgreen?style=for-the-badge&logo=chakra-ui)
+ ![](https://img.shields.io/badge/Node-12.16.1-9cf?style=for-the-badge&logo=node)
 
 
 </div>
