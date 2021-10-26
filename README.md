@@ -18,9 +18,13 @@
  
 </div>
  
+ <div align=center>
+ 
 ⚡**RTConfer**⚡ is an Online Rich-Media Collaborative Whiteboard Platform.
 
 **Bring Teams Together, anywhere.**
+ 
+ </div>
 
 ## ⚙️ Feature Hightlight
 
