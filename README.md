@@ -1,5 +1,3 @@
-[![image](https://www.linkpicture.com/q/LOGO6.png)](https://www.linkpicture.com/view.php?img=LPic617768bc317c51963078982)
-
 <div align=center>
  
  [![image](https://www.linkpicture.com/q/LOGO6.png)](https://www.linkpicture.com/view.php?img=LPic617768bc317c51963078982)
