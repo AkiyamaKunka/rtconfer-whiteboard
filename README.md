@@ -38,7 +38,7 @@
 [![image](https://www.linkpicture.com/q/session-creation.png)](https://www.linkpicture.com/view.php?img=LPic61780344101cd2018067068)
  -->
  
-## 🚀 Paltform Display
+## 🚀 Exhibition Cabinet
 
 <p align="center">
   I'm pleased to show you the demo website here: ⚡ www.rtconfer.com ⚡ to try all the feature by your own!
