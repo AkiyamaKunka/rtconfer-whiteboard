@@ -30,7 +30,7 @@
 
 * 💻 Live Streaming: engaging experience for group real-time online video streaming within whiteboard.
 * 📈 Rich-media Canvas: Our Rich-Media web canvas enables you to work the way you want to, keep everyone in the loop.
-* 📑 MEETINGS + WORKSHOPS: Whether your teams are colocated, distributed, or fully remote, Run productive, engaging online remote meetings and workshops with your team.
+* 📑 Integrated Code & Rich-Text Editor: Share insparing code and text with teammater just within the Canvas, in real-time.
 * 👥 TEAM & SESSIONS: No matter when, you can easily create teams and manage them. View your historical meetings and resume them at any time. It's time to be a leader, make team productive, collaborative and efficient.
 
 [![image](https://www.linkpicture.com/q/meeting-room.png)](https://www.linkpicture.com/view.php?img=LPic617769959bff31447176570)
