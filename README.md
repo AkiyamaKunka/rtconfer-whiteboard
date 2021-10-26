@@ -22,8 +22,6 @@
 
 **Bring Teams Together, anywhere.**
 
-![Main Page](https://i.ibb.co/MkMcCQn/main-page.png)
-
 ## ⚙️ Feature Hightlight
 
 * 💻 Online video streaming in Group
