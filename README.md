@@ -50,7 +50,7 @@
 [![image](https://www.linkpicture.com/q/support-tem.png)](https://www.linkpicture.com/view.php?img=LPic61776a0bbbfbb423573724)
 
 
-# RTConfer : Deploy Locally
+# 📦 Build and Deploy
 
 ## 🚀 If you are a client who want to deploy our service or test:
 
@@ -72,7 +72,7 @@ Please follow the steps to deploy our web service as quickly as possible!
 
 
 
-## 📦  If you are a engineer who wanna further development:
+## 🔍 If you are a engineer who wanna further development:
 
 ### Prerequisites:
 
