@@ -31,7 +31,8 @@
 * 💻 Live Streaming: Engaging experience for group real-time online video streaming within whiteboard.
 * 📈 Canvas: Real-time collaborative web painting canvas enables you to keep everyone in the loop.
 * 📑 Code & Rich-Text Editor: Share insparing code and text with teammater within Canvas, in real-time.
-* 👥 TEAM & SESSIONS: No matter when, you can easily create teams and manage them. View your historical meetings and resume them at any time. It's time to be a leader, make team productive, collaborative and efficient.
+* 📑 Code & Rich-Text Editor: Share insparing code and text with teammater within Canvas, in real-time.
+* 👥 TEAM & SESSIONS: Easily create teams and manage them. View your historical meetings and resume at any time.
 
 [![image](https://www.linkpicture.com/q/meeting-room.png)](https://www.linkpicture.com/view.php?img=LPic617769959bff31447176570)
 
@@ -133,7 +134,7 @@ docker ps
 ![MERN DOCKER diagram](https://github.com/sujaykundu777/mern-docker/blob/master/3-tier-diagram.png?raw=true)
 
 
-#### Copyright @ Jisuanke Inc. & Group LucyRiver's Ice Tea @ School of Software, Nankai University
+### Specially thanks @Jisuanke Inc. and my home college @Nankai University
 
 
 
