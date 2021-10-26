@@ -39,12 +39,14 @@
  -->
 <p align="center">
   <img alt="Light" src="https://www.linkpicture.com/q/meeting-room.png" width="93%">
- 
-   Fig.1 - 4K Mountains Wallpaper
 
+</p>
+ <p align="center">
+   Fig.1 - 4K Mountains Wallpaper
 </p>
 <p align="center">
   
+
   <img alt="Dark" src="https://www.linkpicture.com/q/session-creation.png" width="93%">
 </p>
 
