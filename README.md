@@ -37,19 +37,28 @@
 
 [![image](https://www.linkpicture.com/q/session-creation.png)](https://www.linkpicture.com/view.php?img=LPic61780344101cd2018067068)
  -->
+ 
+## 🚀 Paltform Display
 <p align="center">
   <img alt="Light" src="https://www.linkpicture.com/q/meeting-room.png" width="93%">
 </p>
  <p align="center">
-   Fig.1 - 4K Mountains Wallpaper
+    Canvas (Displaying Code Editor)
 </p>
 <p align="center">
- <figure>
   <img alt="Dark" src="https://www.linkpicture.com/q/session-creation.png" width="93%">
-  
-  <figcaption align = "center"><b>Fig.1 - 4K Mountains Wallpaper</b></figcaption>
-  </figure>
 </p>
+ <p align="center">
+    Create Meeting
+</p>
+<p align="center">
+  <img alt="Dark" src="https://www.linkpicture.com/q/main-page-compressed-min.png" width="93%">
+</p>
+ <p align="center">
+    Main Page
+</p>
+
+
 
 
 ## 📄 Complete Guidebook
@@ -70,7 +79,7 @@
 
 # 📦 Build and Deploy
 
-## 🚀 If you are a client who want to deploy our service or test:
+## ✈️ If you are a client who want to deploy our service or test:
 
 Please follow the steps to deploy our web service as quickly as possible!
 
