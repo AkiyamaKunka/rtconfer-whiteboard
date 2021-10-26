@@ -5,12 +5,13 @@
  ![](https://img.shields.io/badge/License-Apache-blue?style=for-the-badge&logo=apache)
  ![](https://img.shields.io/badge/React-17.0.1-brightgreen?style=for-the-badge&logo=react)
  ![](https://img.shields.io/badge/Chakra-1.6.5-brightgreen?style=for-the-badge&logo=chakra-ui)
- ![](https://img.shields.io/badge/express-4.17.1-ff69b4?style=for-the-badge&logo=express)
+
 
 </div>
 
 <div align=center>
  
+ ![](https://img.shields.io/badge/express-4.17.1-ff69b4?style=for-the-badge&logo=express)
  ![](https://img.shields.io/badge/MongoDB-4.0.1-orange?style=for-the-badge&logo=mongodb)
  ![](https://img.shields.io/badge/Docker-20.10.7-9cf?style=for-the-badge&logo=docker)
  
