@@ -32,11 +32,11 @@
 * 💻 Live Streaming: Engaging experience for group real-time online video streaming in session.
 * 📑 Code & Rich-Text Editor: Share insparing code and text with teammater within canvas, in real-time.
 * 📎 File Display: Upload and share your file on canvas and make notes supported by canvas painting. 
-
+<!-- 
 [![image](https://www.linkpicture.com/q/meeting-room.png)](https://www.linkpicture.com/view.php?img=LPic617769959bff31447176570)
 
 [![image](https://www.linkpicture.com/q/session-creation.png)](https://www.linkpicture.com/view.php?img=LPic61780344101cd2018067068)
-
+ -->
 <p align="center">
   <img alt="Light" src="https://www.linkpicture.com/q/meeting-room.png" width="90%">
  
