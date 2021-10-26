@@ -1,4 +1,4 @@
-[![image](https://www.linkpicture.com/q/LOGO-1.png)](https://www.linkpicture.com/view.php?img=LPic617762967e5d6479173680)
+[![image](https://www.linkpicture.com/q/LOGO2.png)](https://www.linkpicture.com/view.php?img=LPic617763b09a283181907088)
 
 # RTConfer · ![](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge&logo=appveyor)
 
