@@ -112,6 +112,11 @@ Have Docker Installed in your System, and also a clear mind to follow these step
 
 ##### In Development Mode :
 
+<p align="center">
+  <img alt="Light" src="https://github.com/sujaykundu777/mern-docker/blob/master/3-tier-diagram.png?raw=true" width="93%">
+</p>
+
+
 First copy the content of **docker-compose-dev.yml** to **docker-compose.yml**
 
 and also copy the content of **server/src/index.dev.js** to **server/src/index.js**
@@ -159,11 +164,7 @@ docker images
 docker run --name "myapp-server" -p 80:8080 myapp-server:1
 docker ps
 
-<p align="center">
-  <img alt="Light" src="https://github.com/sujaykundu777/mern-docker/blob/master/3-tier-diagram.png?raw=true" width="93%">
-</p>
 
-![MERN DOCKER diagram](https://github.com/sujaykundu777/mern-docker/blob/master/3-tier-diagram.png?raw=true)
 
 
 Specially thanks @Jisuanke Inc. and my home college @Nankai University.
