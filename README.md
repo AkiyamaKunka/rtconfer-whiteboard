@@ -24,7 +24,7 @@
 
 ## ⚙️ Feature Hightlight
 
-* 💻 REAL-TIME COLLABORATION: we provides an engaging, intuitive, in-person collaboration experience with multiple options for real-time or asynchronous teamwork on an online whiteboard.
+* 💻 Live streaming: engaging collaboration experience for group real-time online video streaming on an online whiteboard.
 * 📈 RICH-MEDIA CANVAS: Our Rich-Media web canvas enables you to work the way you want to. Unleash your creativity, plan projects from all angles, and create centralized hubs of information to keep everyone in the loop.
 * 📑 MEETINGS + WORKSHOPS: Whether your teams are colocated, distributed, or fully remote, Run productive, engaging online remote meetings and workshops with your team.
 * 👥 TEAM & SESSIONS: No matter when, you can easily create teams and manage them. View your historical meetings and resume them at any time. It's time to be a leader, make team productive, collaborative and efficient.
