@@ -24,21 +24,21 @@
 
 ![Main Page](https://i.ibb.co/MkMcCQn/main-page.png)
 
+## ⚙️ Feature Hightlight
+
+* 💻 Online video streaming in Group
+* 📈 Real-time rich-media whiltboard collaboration
+* 📑 Real-time code and rich-text editing
+* 📎 File uploading & displaying
+* 👥 Robust user and team organization
+
+[![image](https://www.linkpicture.com/q/meeting-room.png)](https://www.linkpicture.com/view.php?img=LPic617769959bff31447176570)
+
 ## 📄 Complete Guidebook
 [Click here for Developers' Guidebook!](https://www.yuque.com/docs/share/894368bd-aea0-4871-8ee1-92ecfa3ff202?#) 
 
 ## 🎬 Demo Video
  [Click Here for video on Youtube!](https://youtu.be/U80gxszblNo) 
-
-## ⚙️ Feature Hightlight
-
-* Online video streaming in Group
-* Real-time rich-media whiltboard collaboration
-* Real-time code and rich-text editing
-* File uploading & displaying
-* Robust user and team organization
-
-[![image](https://www.linkpicture.com/q/meeting-room.png)](https://www.linkpicture.com/view.php?img=LPic617769959bff31447176570)
 
 ## 🔧 Tech Outline
 
