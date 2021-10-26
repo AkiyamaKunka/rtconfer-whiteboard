@@ -39,17 +39,14 @@
  -->
 <p align="center">
   <img alt="Light" src="https://www.linkpicture.com/q/meeting-room.png" width="93%">
-
 </p>
  <p align="center">
    Fig.1 - 4K Mountains Wallpaper
 </p>
 <p align="center">
-  
-
   <img alt="Dark" src="https://www.linkpicture.com/q/session-creation.png" width="93%">
 </p>
-
+<figcaption align = "center"><b>Fig.1 - 4K Mountains Wallpaper</b></figcaption>
 
 ## 📄 Complete Guidebook
 [Click here for Developers' Guidebook!](https://www.yuque.com/docs/share/894368bd-aea0-4871-8ee1-92ecfa3ff202?#) 
