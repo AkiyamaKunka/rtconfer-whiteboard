@@ -38,12 +38,12 @@
 [![image](https://www.linkpicture.com/q/session-creation.png)](https://www.linkpicture.com/view.php?img=LPic61780344101cd2018067068)
  -->
 <p align="center">
-  <img alt="Light" src="https://www.linkpicture.com/q/meeting-room.png" width="90%">
+  <img alt="Light" src="https://www.linkpicture.com/q/meeting-room.png" width="93%">
  
 </p>
 <p align="center">
   
-  <img alt="Dark" src="https://www.linkpicture.com/q/session-creation.png" width="90%">
+  <img alt="Dark" src="https://www.linkpicture.com/q/session-creation.png" width="93%">
 </p>
 
 
