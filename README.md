@@ -167,10 +167,14 @@ docker ps
 
 
 
-Specially thanks @Jisuanke Inc. and my home college @Nankai University.
+### Specially Thanks:
 
-Contributors:
+@Jisuanke Inc. 
 
-Akiyama, JamesYang, WenBiming
+my home college @Nankai University.
+
+### Contributors:
+
+AkiyamaKunka, JamesYang, WenBiming
 
 
