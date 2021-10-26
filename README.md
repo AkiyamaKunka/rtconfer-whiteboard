@@ -46,6 +46,7 @@
 <p align="center">
  <figure>
   <img alt="Dark" src="https://www.linkpicture.com/q/session-creation.png" width="93%">
+  
   <figcaption align = "center"><b>Fig.1 - 4K Mountains Wallpaper</b></figcaption>
   </figure>
 </p>
