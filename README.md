@@ -52,7 +52,7 @@
 
 # RTConfer : Deploy Locally
 
-## 1. If you are a client who want to deploy our service or test:
+## 🚀 If you are a client who want to deploy our service or test:
 
 Please follow the steps to deploy our web service as quickly as possible!
 
