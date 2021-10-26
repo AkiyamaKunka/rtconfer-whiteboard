@@ -44,9 +44,12 @@
    Fig.1 - 4K Mountains Wallpaper
 </p>
 <p align="center">
+ <figure>
   <img alt="Dark" src="https://www.linkpicture.com/q/session-creation.png" width="93%">
+  <figcaption align = "center"><b>Fig.1 - 4K Mountains Wallpaper</b></figcaption>
+  </figure>
 </p>
-<figcaption align = "center"><b>Fig.1 - 4K Mountains Wallpaper</b></figcaption>
+
 
 ## 📄 Complete Guidebook
 [Click here for Developers' Guidebook!](https://www.yuque.com/docs/share/894368bd-aea0-4871-8ee1-92ecfa3ff202?#) 
