@@ -171,10 +171,10 @@ docker ps
 
 @Jisuanke Inc. 
 
-my home college @Nankai University.
+@Nankai University.
 
 ## :octocat: Contributors:
 
-AkiyamaKunka, JamesYang, WenBiming，SweetieLee
+@AkiyamaKunka, @JamesYang, @WenBiming, @SweetieLee
 
 
