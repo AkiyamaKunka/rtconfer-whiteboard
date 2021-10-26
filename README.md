@@ -38,10 +38,14 @@
 [![image](https://www.linkpicture.com/q/session-creation.png)](https://www.linkpicture.com/view.php?img=LPic61780344101cd2018067068)
 
 <p align="center">
-  <img alt="Light" src="https://www.linkpicture.com/q/meeting-room.png" width="45%">
-&nbsp; &nbsp; &nbsp; &nbsp;
-  <img alt="Dark" src="https://www.linkpicture.com/q/session-creation.png" width="45%">
+  <img alt="Light" src="https://www.linkpicture.com/q/meeting-room.png" width="80%">
+ 
 </p>
+<p align="center">
+  
+  <img alt="Dark" src="https://www.linkpicture.com/q/session-creation.png" width="80%">
+</p>
+
 
 ## 📄 Complete Guidebook
 [Click here for Developers' Guidebook!](https://www.yuque.com/docs/share/894368bd-aea0-4871-8ee1-92ecfa3ff202?#) 
