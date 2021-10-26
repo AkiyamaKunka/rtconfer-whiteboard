@@ -134,7 +134,7 @@ docker ps
 ![MERN DOCKER diagram](https://github.com/sujaykundu777/mern-docker/blob/master/3-tier-diagram.png?raw=true)
 
 
-### Specially thanks @Jisuanke Inc. and my home college @Nankai University
+Specially thanks @Jisuanke Inc. and my home college @Nankai University
 
 
 
