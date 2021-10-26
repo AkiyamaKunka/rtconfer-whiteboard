@@ -38,9 +38,9 @@
 [![image](https://www.linkpicture.com/q/session-creation.png)](https://www.linkpicture.com/view.php?img=LPic61780344101cd2018067068)
 
 <p align="center">
-  <img alt="Light" src="https://www.linkpicture.com/q/meeting-room.png" width="50%">
+  <img alt="Light" src="https://www.linkpicture.com/q/meeting-room.png" width="45%">
 &nbsp; &nbsp; &nbsp; &nbsp;
-  <img alt="Dark" src="https://www.linkpicture.com/q/session-creation.png" width="50%">
+  <img alt="Dark" src="https://www.linkpicture.com/q/session-creation.png" width="45%">
 </p>
 
 ## 📄 Complete Guidebook
