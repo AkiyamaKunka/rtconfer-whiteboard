@@ -24,7 +24,7 @@
 
 ![Main Page](https://i.ibb.co/MkMcCQn/main-page.png)
 
-## 📖 Complete Guidebook
+## 📋 Complete Guidebook
 [Click here for Developers' Guidebook!](https://www.yuque.com/docs/share/894368bd-aea0-4871-8ee1-92ecfa3ff202?#) 
 
 ## 🎬 Demo Video
