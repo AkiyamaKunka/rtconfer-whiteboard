@@ -35,6 +35,8 @@
 
 [![image](https://www.linkpicture.com/q/meeting-room.png)](https://www.linkpicture.com/view.php?img=LPic617769959bff31447176570)
 
+[![image](https://www.linkpicture.com/q/session-creation.png)](https://www.linkpicture.com/view.php?img=LPic61780344101cd2018067068)
+
 ## 📄 Complete Guidebook
 [Click here for Developers' Guidebook!](https://www.yuque.com/docs/share/894368bd-aea0-4871-8ee1-92ecfa3ff202?#) 
 
