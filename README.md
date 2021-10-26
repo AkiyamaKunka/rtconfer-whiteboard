@@ -159,7 +159,9 @@ docker images
 docker run --name "myapp-server" -p 80:8080 myapp-server:1
 docker ps
 
-
+<p align="center">
+  <img alt="Light" src="https://github.com/sujaykundu777/mern-docker/blob/master/3-tier-diagram.png?raw=true" width="93%">
+</p>
 
 ![MERN DOCKER diagram](https://github.com/sujaykundu777/mern-docker/blob/master/3-tier-diagram.png?raw=true)
 
