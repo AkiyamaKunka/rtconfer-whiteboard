@@ -14,7 +14,7 @@
  ![](https://img.shields.io/badge/express-4.17.1-ff69b4?style=for-the-badge&logo=express)
  ![](https://img.shields.io/badge/MongoDB-4.0.1-orange?style=for-the-badge&logo=mongodb)
  ![](https://img.shields.io/badge/Docker-20.10.7-9cf?style=for-the-badge&logo=docker)
-  ![](https://img.shields.io/badge/Docker-20.10.7-9cf?style=for-the-badge&logo=agora)
+  ![](https://img.shields.io/badge/Docker-20.10.7-9cf?style=for-the-badge&logo=agora.io)
  
 </div>
  
