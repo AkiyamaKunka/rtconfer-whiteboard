@@ -45,42 +45,22 @@
   I'm pleased to show you the demo website here: ⚡ www.rtconfer.com ⚡ to try all the feature by your own!
 </p>
 
-<p align="center">
-  <img alt="Light" src="https://www.linkpicture.com/q/meeting-room.png" width="93%">
-</p>
- <p align="center">
-    Canvas (Displaying Code Editor)
-</p>
-<p align="center">
-  <img alt="Dark" src="https://www.linkpicture.com/q/session-creation.png" width="93%">
-</p>
- <p align="center">
-    Create Meeting
-</p>
-<p align="center">
-  <img alt="Dark" src="https://www.linkpicture.com/q/main-page-compressed-min.png" width="93%">
-</p>
- <p align="center">
-    Main Page
-</p>
+<div align="center" width="93%">
+
+![website](./public/website-gif.gif)
+
+</div>
 
 
 
 
-## 📄 Complete Guidebook
-[Click here for Developers' Guidebook!](https://www.yuque.com/docs/share/894368bd-aea0-4871-8ee1-92ecfa3ff202?#) 
 
 ## 🎬 Demo Video
- [Click Here for video on Youtube!](https://youtu.be/U80gxszblNo) 
+[Click Here for video on Youtube!](https://youtu.be/U80gxszblNo)
 
-## 🔧 Tech Outline
 
-* Designed website with robust session security and multi-person video & audio call stability with Socket.IO based on WebSocket
-* Applied MERN: MongoDB, Express.js RESTful API, React.js, Node.js, JWT authentication, Chakra UI with Heroku in development
-* Implemented real-time collaborative code and rich-text editing with Firepad, file uploading with AliCloud Open Storage Service
-* Integrated Google Real-time Firebase handling input conflicts, realizing message playback to client-side of code/text editing
 
-[![image](https://www.linkpicture.com/q/support-tem.png)](https://www.linkpicture.com/view.php?img=LPic61776a0bbbfbb423573724)
+
 
 
 # 📦 Build and Deploy
@@ -165,7 +145,16 @@ docker images
 docker run --name "myapp-server" -p 80:8080 myapp-server:1
 docker ps
 
+## 📄 Complete Guidebook
+[Click here for Developers' Guidebook!](https://www.yuque.com/docs/share/894368bd-aea0-4871-8ee1-92ecfa3ff202?#)
 
+
+## 🔧 Tech Outline
+
+* Designed website with robust session security and multi-person video & audio call stability with Socket.IO based on WebSocket
+* Applied MERN: MongoDB, Express.js RESTful API, React.js, Node.js, JWT authentication, Chakra UI with Heroku in development
+* Implemented real-time collaborative code and rich-text editing with Firepad, file uploading with AliCloud Open Storage Service
+* Integrated Google Real-time Firebase handling input conflicts, realizing message playback to client-side of code/text editing
 
 
 ## ❤️ Specially Thanks:
