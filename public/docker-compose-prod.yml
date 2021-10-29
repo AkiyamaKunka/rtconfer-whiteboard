@@ -2,8 +2,8 @@ version: '3.9'
 services:
   web:
     build:
-      context: .
-      dockerfile: Dockerfile
+      context: ..
+      dockerfile: ../Dockerfile
     ports:
       - "8080:8080"
     env_file: ./server/.env

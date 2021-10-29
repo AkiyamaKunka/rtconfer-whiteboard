@@ -3,8 +3,8 @@ version: '3.9'
 services:
   server:
     build:
-      context: ./server
-      dockerfile: Dockerfile
+      context: ../server
+      dockerfile: ../server/Dockerfile
     image: myapp-server
     container_name: myapp-node-server
     command: npm run start
@@ -33,8 +33,8 @@ services:
       - app-network
   client:
     build:
-      context: ./client
-      dockerfile: Dockerfile
+      context: ../client
+      dockerfile: ../client/Dockerfile
     image: myapp-client
     container_name: myapp-react-client
     command: npm run start
