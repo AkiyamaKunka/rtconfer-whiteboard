@@ -91,11 +91,12 @@ Please follow the steps to deploy our web service as quickly as possible!
 
 Have Docker Installed in your System, and also a clear mind to follow these steps.
 
-##### In Development Mode :
-
 <p align="center">
   <img alt="Light" src="https://github.com/sujaykundu777/mern-docker/blob/master/3-tier-diagram.png?raw=true" width="93%">
 </p>
+
+
+##### In Development Mode :
 
 
 First copy the content of **docker-compose-dev.yml** to **docker-compose.yml**
