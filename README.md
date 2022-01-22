@@ -42,7 +42,7 @@
 ## 🚀 Exhibition Cabinet
 
 <p align="center">
-  I'm pleased to show you the demo website here: ⚡ www.rtconfer.com ⚡ to try all the feature by your own!
+  I'm pleased to show you the demo website here: ⚡ www.rtconfer.com ⚡ to try all the feature by your own! (Current Under Maintainance)
 </p>
 
 <div align="center" width="93%">
