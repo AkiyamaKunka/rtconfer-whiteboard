@@ -22,7 +22,11 @@
  
 ⚡**RTConfer**⚡ is an Online Rich-Media Collaborative Whiteboard Platform.
  
-**Bring Teams Together, anywhere.**
+Bring Teams Together, anywhere.
+
+**[This repository has lost most of its historical stars because it was accidentally set to private]**
+
+**[Do not accept new code contributions, archived and read-only for display purposes]**
  
 </div>
 
